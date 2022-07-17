@@ -9,7 +9,7 @@ import Testimonials from "../components/testimonials";
 import Cta from "../components/cta";
 import Faq from "../components/faq";
 import PopupWidget from "../components/popupWidget";
-
+import LatestNews from "../components/LatestNews";
 export default function Home() {
   return (
     <>
@@ -26,7 +26,7 @@ export default function Home() {
       <Video />
 
       <Benefits imgPos="left" data={benefitOne} />
-      <Faq />
+      <LatestNews/>
       <Footer />
       <PopupWidget />
     </>
