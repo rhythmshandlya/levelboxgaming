@@ -1,6 +1,6 @@
 import Container from "./container";
 
-export default function Video() {
+export default function Video({ data }) {
   return (
     <Container>
       <div className="w-full max-w-4xl mx-auto overflow-hidden lg:mb-20 mt-20 rounded-2xl ">
@@ -10,7 +10,7 @@ export default function Video() {
           */}
         <div className="relative bg-indigo-300 cursor-pointer aspect-w-16 aspect-h-9 ">
           <iframe
-            src="https://www.youtube.com/embed/_CPrYB6Q-HM?controls=0"
+            src={data.link}
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

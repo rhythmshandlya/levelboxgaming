@@ -2,33 +2,18 @@ import Image from "next/image";
 import React from "react";
 import Container from "./container";
 
-export default function Benefits(props) {
-  const { data } = props;
-
+export default function Benefits({ data }) {
   return (
     <>
       <Container className="flex flex-wrap mb-20 lg:gap-10 lg:flex-nowrap ">
-        <div
-          className={`flex items-center justify-center w-full lg:w-1/2 ${
-            props.imgPos === "right" ? "lg:order-1" : ""
-          }`}
-        >
+        <div className={`flex items-center justify-center w-full lg:w-1/2`}>
           <div>
-            <Image
-              src={data.image}
-              width="521"
-              height="482"
-              alt="Benefits"
-              layout="intrinsic"
-              placeholder="blur"
-            />
+            <Image src={data.image} width="521" height="482" alt="Benefits" />
           </div>
         </div>
 
         <div
-          className={`flex flex-wrap items-center w-full lg:w-1/2 ${
-            props.imgPos === "right" ? "lg:justify-end" : ""
-          }`}
+          className={`flex flex-wrap items-center w-full lg:w-1/2 lg:justify-end`}
         >
           <div>
             <div className="flex flex-col w-full mt-4">
@@ -43,7 +28,7 @@ export default function Benefits(props) {
 
             <div className="flex w-full mt-3">
               <a
-                href="#"
+                href={data.android}
                 target="_blank"
                 rel="noopener"
                 className="relative block w-40 mr-5"
@@ -57,7 +42,7 @@ export default function Benefits(props) {
                 />
               </a>
               <a
-                href="#"
+                href={data.ios}
                 target="_blank"
                 rel="noopener"
                 className="relative block w-40"

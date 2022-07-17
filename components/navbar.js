@@ -3,19 +3,11 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 
-const navigation = [
-  { name: "Start Attack", href: "#", current: false },
-  { name: "News", href: "#", current: false },
-  { name: "About Us", href: "#", current: false },
-  { name: "Careers", href: "#", current: false },
-  { name: "Support", href: "#", current: false },
-];
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Navbar() {
+export default function Navbar({ data }) {
   return (
     <Disclosure as="nav" className="bg-black">
       {({ open }) => (
@@ -47,7 +39,7 @@ export default function Navbar() {
                 </div>
                 <div className="hidden sm:block sm:ml-8">
                   <div className="flex mt-3 space-x-3">
-                    {navigation.map((item) => (
+                    {data.links.map((item) => (
                       <a
                         key={item.name}
                         href={item.href}

@@ -1,6 +1,6 @@
 import Container from "./container";
 
-export default function Hero() {
+export default function Hero({ data }) {
   return (
     <div className="background-hero">
       <div className="hero-filter"></div>
@@ -10,11 +10,10 @@ export default function Hero() {
           style={{ zIndex: 100 }}
         >
           <h2 className="max-w-2xl mt-3 text-3xl font-semibold leading-snug tracking-tight text-white lg:leading-tight lg:text-4xl dark:text-white">
-            Stack Attack
+            {data.heading}
           </h2>
           <p className="max-w-xl py-4 text-lg leading-normal text-white lg:text-xl xl:text-xl dark:text-gray-300">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit.
+            {data.subheading}
           </p>
           <div className="flex">
             <button class="bg-red-500 w-40 px-3.5 py-2 m-1 hover:bg-white text-white hover:text-black font-medium rounded">

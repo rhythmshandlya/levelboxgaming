@@ -5,12 +5,17 @@ import { benefitOne, benefitTwo } from "../components/data";
 import Video from "../components/video";
 import Benefits from "../components/benefits";
 import Footer from "../components/footer";
-import Testimonials from "../components/testimonials";
-import Cta from "../components/cta";
-import Faq from "../components/faq";
 import PopupWidget from "../components/popupWidget";
+import LatestNews from "../components/LatestNews";
+import useSWR from "swr";
+const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Home() {
+  const { data, error } = useSWR("/api/static", fetcher);
+
+  if (error) return <div>Failed to load</div>;
+  if (!data) return <div>Loading</div>;
+
   return (
     <>
       <Head>
@@ -19,15 +24,18 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar />
+      <Navbar data={data.navigation} />
 
-      <Hero />
+      <Hero data={data.hero} />
 
-      <Video />
+      <Video data={data.video} />
 
-      <Benefits imgPos="left" data={benefitOne} />
-      <Faq />
+      <Benefits imgPos="left" data={data.bannerSoon} />
+
+      <LatestNews />
+
       <Footer />
+
       <PopupWidget />
     </>
   );
