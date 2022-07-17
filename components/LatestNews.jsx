@@ -17,8 +17,8 @@ const LatestNews = () => {
     ));
   return (
     <div className='text-center '>
-      <h1 className='font-bold mt-8'>Latest News</h1>
-      <div  className="">
+      <h1 className='font-bold mt-8 mb-8 text-3xl'>Latest News</h1>
+      <div  className="overflow-hidden w-full mr-256 ml-256 ">
       <Carousel 
       autoplay={true}
       renderCenterLeftControls={({ previousSlide }) => (
@@ -27,6 +27,8 @@ const LatestNews = () => {
      renderCenterRightControls={({ nextSlide }) => (
      <button style={{display:"none"}} onClick={nextSlide}>Next</button>
      )}
+     slidesToShow={1}
+     cellAlign="center"
       >
       {renderSlides()}
       </Carousel>
