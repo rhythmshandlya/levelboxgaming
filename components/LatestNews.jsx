@@ -1,9 +1,6 @@
 import React from "react";
-// import "./styles.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import LatestNewsCard from "./LatestNewsCard";
-import Slider from "react-slick";
+
 import Carousel from 'nuka-carousel';
 
 const LatestNews = () => {
