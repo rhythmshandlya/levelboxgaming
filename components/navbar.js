@@ -4,7 +4,7 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 
 const navigation = [
-  { name: "Start Attack", href: "#", current: true },
+  { name: "Start Attack", href: "#", current: false },
   { name: "News", href: "#", current: false },
   { name: "About Us", href: "#", current: false },
   { name: "Careers", href: "#", current: false },
@@ -23,7 +23,6 @@ export default function Navbar() {
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-10 p-1">
             <div className="relative flex items-center justify-between h-16">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                {/* Mobile menu button*/}
                 <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
@@ -41,13 +40,13 @@ export default function Navbar() {
                     alt="LevelBoxGames"
                   />
                   <img
-                    className="hidden lg:block h-12 w-auto"
+                    className="hidden lg:block h-16 w-auto"
                     src="/img/logo-white.png"
                     alt="LevelBoxGames"
                   />
                 </div>
                 <div className="hidden sm:block sm:ml-8">
-                  <div className="flex mt-1 space-x-3">
+                  <div className="flex mt-3 space-x-3">
                     {navigation.map((item) => (
                       <a
                         key={item.name}
@@ -55,7 +54,7 @@ export default function Navbar() {
                         className={classNames(
                           item.current
                             ? "bg-gray-900 text-white"
-                            : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                            : "text-white hover:text-gray-300 ",
                           "px-3 py-2 rounded-md text-sm font-medium"
                         )}
                         aria-current={item.current ? "page" : undefined}

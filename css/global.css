@@ -1,0 +1,26 @@
+.background-hero{
+    background-image: url('/img/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 98vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: right;
+    text-align: center;
+    padding: 0 20px;
+    color: white;
+    position: relative;
+}
+.temp{
+    position: relative;
+}
+.hero-filter{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 98vh;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+}
