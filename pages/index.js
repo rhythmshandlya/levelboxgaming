@@ -8,18 +8,25 @@ import PopupWidget from "../components/popupWidget";
 import LatestNews from "../components/LatestNews";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useTheme } from "next-themes";
 
 // import useSWR from "swr";
 // const fetcher = (url) => fetch(url).then((res) => res.json());
 
 import staticData from "../json/data";
 import Banner from "../components/Banner";
+import { useEffect } from "react";
 
 export default function Home() {
   //const { data, error } = useSWR("/api/static", fetcher);
 
   //if (error) return <div>Failed to load</div>;
   //if (!data) return <div>Loading</div>;
+  const { theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    setTheme("light");
+  }, []);
 
   const data = JSON.parse(staticData);
   return (
@@ -30,7 +37,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar data={data.navigation} />
+      <Navbar data={data.navigation} theme={theme} setTheme={setTheme} />
 
       <Hero data={data.hero} />
 
