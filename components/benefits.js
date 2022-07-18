@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Container from "./container";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 const InstallOn = ({ download }) => {
   return (
@@ -42,9 +42,15 @@ export default function Benefits({ data, download }) {
     <>
       <div className="flex flex-wrap justify-start lg:flex-nowrap">
         <div className={`flex items-start justify-start w-full lg:w-1/2`}>
-          <div>
-            <Image src={data.image} width="521" height="482" alt="Benefits" />
-          </div>
+          <AnimationOnScroll
+            animateIn="animate__fadeInLeft"
+            animateOnce="true"
+            offset={-50}
+          >
+            <div>
+              <Image src={data.image} width="521" height="482" alt="Benefits" />
+            </div>
+          </AnimationOnScroll>
         </div>
 
         <div className={`flex flex-wrap`}>
@@ -56,7 +62,7 @@ export default function Benefits({ data, download }) {
             <p className="max-w-lg py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">
               {data.desc}
             </p>
-          <InstallOn download={download} />
+            <InstallOn download={download} />
           </div>
         </div>
       </div>

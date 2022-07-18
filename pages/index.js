@@ -54,10 +54,11 @@ export default function Home() {
       <LatestNews data={data.news} />
 
       <div className="text-center">
-      <button className="bg-red-500 w-40 px-3.5 py-2 m-1 border-2 border-red-500 hover:bg-white text-black hover:text-black font-medium rounded  hover:border-red-500">
-              Pre Order
-            </button>
+        <button className="bg-red-500 w-40 px-3.5 py-2 m-1 border-2 border-red-500 hover:bg-white text-black hover:text-black font-medium rounded  hover:border-red-500">
+          Pre Order
+        </button>
       </div>
+
       <div className="mt-10 mb-10">
         {data.banners.map((banner, i) => {
           return <Banner data={banner} key={i} />;
