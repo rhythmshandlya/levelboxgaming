@@ -63,7 +63,7 @@ export default function Home() {
         })}
       </div>
 
-      <Footer />
+      <Footer theme={theme} />
 
       <PopupWidget />
     </>

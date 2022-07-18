@@ -28,12 +28,12 @@ export default function Navbar({ data, theme, setTheme }) {
                 <div className="flex-shrink-0 flex items-center">
                   <img
                     className="block lg:hidden h-9 w-auto"
-                    src="/img/logo-white.png"
+                    src="/img/logo-dark.png"
                     alt="LevelBoxGames"
                   />
                   <img
                     className="hidden lg:block h-16 w-auto"
-                    src="/img/logo-white.png"
+                    src="/img/logo-dark.png"
                     alt="LevelBoxGames"
                   />
                 </div>
