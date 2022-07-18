@@ -11,7 +11,7 @@ const Banner = ({ data }) => {
       <div className="background-coc flex" style={style}>
         <div className="banner-filter"></div>
         <div
-          className={`relative w-[500px] ${
+          className={`relative max-w-[500px] ${
             data.align == "right" ? "ml-auto mr-0" : ""
           }`}
         >

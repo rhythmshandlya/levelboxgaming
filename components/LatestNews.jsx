@@ -16,9 +16,19 @@ export function SimpleSlider({ data }) {
     rows: 2,
     pauseOnDotsHover: true,
     pauseOnHover: false,
+    responsive: [
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          rows: 1,
+        },
+      },
+    ],
   };
   return (
-    <div className="flex flex-col align-middle text-center mt-24 mb-10 ml-24 mr-24">
+    <div className="flex flex-col align-middle text-center lg:mt-24 mb-10 lg:ml-24 lg:mr-24">
       <h1 className="font-bold mb-14 text-3xl">Latest News</h1>
       <Slider {...settings}>
         {data.map((news) => {

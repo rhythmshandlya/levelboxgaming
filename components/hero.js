@@ -15,7 +15,7 @@ export default function Hero({ data }) {
           <p className="max-w-xl py-4 text-lg leading-normal text-white lg:text-xl xl:text-xl dark:text-gray-300">
             {data.subheading}
           </p>
-          <div className="flex">
+          <div className="flex flex-wrap justify-center">
             <button className="bg-red-500 w-40 px-3.5 py-2 m-1 hover:bg-white text-white hover:text-black font-medium rounded">
               Pre Order
             </button>

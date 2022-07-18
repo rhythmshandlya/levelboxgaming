@@ -89,7 +89,7 @@ const Social = () => {
 
 const InstallOn = () => {
   return (
-    <div className="flex">
+    <div className="flex flex-wrap justify-center">
       <a
         href="#"
         target="_blank"
@@ -124,13 +124,13 @@ const InstallOn = () => {
 
 const Footer = ({ theme }) => {
   return (
-    <div className="flex flex-col m-28">
+    <div className="flex flex-col m-28 flex-wrap">
       <div className="mx-auto">
         <Link href="/">
           <img src={`/img/logo-${theme}.png`} alt="LevelBoxGames" />
         </Link>
       </div>
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between flex-wrap">
         <Social />
         <InstallOn />
       </div>
@@ -139,7 +139,7 @@ const Footer = ({ theme }) => {
         <a className="m-4">Safe and Fair Play</a>
         <a className="m-4">Legal</a>
       </div>
-      <div className="flex justify-between text-gray-500 items-end">
+      <div className="flex flex-wrap justify-between text-gray-500 items-end">
         <div className="flex flex-col">
           <a className="m-1">United States</a>
           <a className="m-1">United Kingdom</a>
