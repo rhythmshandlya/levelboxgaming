@@ -11,8 +11,11 @@ export function SimpleSlider({ data }) {
     slidesToShow: 2,
     slidesToScroll: 2,
     autoPlay: true,
+    autoPlaySpeed: 500,
     infinite: true,
     rows: 2,
+    pauseOnDotsHover: true,
+    pauseOnHover: false,
   };
   return (
     <div className="flex flex-col align-middle text-center mt-24 mb-10 ml-24 mr-24">

@@ -39,7 +39,12 @@ export default function Home() {
 
       <LatestNews data={data.news} />
       <div className="text-center">
-        <button className="bg-red-500 w-40 px-3.5 py-2 m-1 hover:bg-red-700 text-white hover:text-white font-medium rounded">
+        <button
+          className="w-40 px-3.5 py-2 m-1 hover:bg-red-700 text-white hover:text-white font-medium rounded"
+          style={{
+            backgroundColor: "#975251",
+          }}
+        >
           News Archives
         </button>
       </div>
