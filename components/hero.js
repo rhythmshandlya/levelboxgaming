@@ -7,9 +7,9 @@ export default function Hero({ data }) {
       <div className="hero-filter"></div>
       <div className="relative">
         <AnimationOnScroll
-          animateIn="animate__bounceIn"
+          animateIn="animate__fadeInDown"
           animateOnce="true"
-          offset="100"
+          offset={-50}
         >
           <Container
             className={`flex w-ful flex-col mt-4 items-center justify-center text-center`}
