@@ -1,51 +1,38 @@
 import React from "react";
 import LatestNewsCard from "./LatestNewsCard";
+import Slider from "react-slick";
 
-import Carousel from "nuka-carousel";
-
-const LatestNews = ({ data }) => {
-  // var a=`/../public/img/News-Thumbnail(${i}).png`;
-  const renderSlides = () =>
-    [1, 2, 3].map((num) => (
-      <div className="flex justify-center">
-        <div className="flex justify-center flex-wrap">
-          {data.map((news) => {
-            return (
+export function SimpleSlider({ data }) {
+  var settings = {
+    dots: true,
+    infinite: true,
+    adaptiveHeight: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    autoPlay: true,
+    infinite: true,
+    rows: 2,
+  };
+  return (
+    <div className="flex flex-col align-middle text-center mt-24 mb-10 ml-24 mr-24">
+      <h1 className="font-bold mb-14 text-3xl">Latest News</h1>
+      <Slider {...settings}>
+        {data.map((news) => {
+          return (
+            <div>
               <LatestNewsCard
                 imageSrc={news.image}
                 title={news.title}
                 date={news.date}
                 summary={news.description}
               />
-            );
-          })}
-        </div>
-      </div>
-    ));
-  return (
-    <div className="text-center ">
-      <h1 className="font-bold mt-8 mb-8 text-3xl">Latest News</h1>
-      <div className="overflow-hidden w-full mr-256 ml-256 ">
-        <Carousel
-          autoplay={true}
-          renderCenterLeftControls={({ previousSlide }) => (
-            <button style={{ display: "none" }} onClick={previousSlide}>
-              Previous
-            </button>
-          )}
-          renderCenterRightControls={({ nextSlide }) => (
-            <button style={{ display: "none" }} onClick={nextSlide}>
-              Next
-            </button>
-          )}
-          slidesToShow={1}
-          cellAlign="center"
-        >
-          {renderSlides()}
-        </Carousel>
-      </div>
+            </div>
+          );
+        })}
+      </Slider>
     </div>
   );
-};
+}
 
-export default LatestNews;
+export default SimpleSlider;
