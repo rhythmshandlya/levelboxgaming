@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import Container from "./container";
 
-export default function Benefits({ data }) {
+export default function Benefits({ data, download }) {
   return (
     <>
       <Container className="flex flex-wrap mb-20 lg:gap-10 lg:flex-nowrap ">
@@ -25,31 +25,31 @@ export default function Benefits({ data }) {
 
           <div className="flex flex-wrap justify-center w-full mt-3">
             <a
-              href={data.android}
+              href={download.playStore.link}
               target="_blank"
               rel="noopener"
               className="relative block w-40"
             >
               <Image
-                src="/img/getOnPlayStore.png"
+                src={download.playStore.image}
                 layout="responsive"
                 alt="Android"
-                width="100"
-                height="37"
+                width="95"
+                height="35"
               />
             </a>
             <a
-              href={data.ios}
+              href={download.appStore.link}
               target="_blank"
               rel="noopener"
               className="relative block w-40"
             >
               <Image
-                src="/img/appStore.png"
+                src={download.appStore.image}
                 layout="responsive"
                 alt="Android"
-                width="100"
-                height="37"
+                width="95"
+                height="35"
               />
             </a>
           </div>

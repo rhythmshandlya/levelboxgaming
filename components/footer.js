@@ -49,32 +49,20 @@ const Linkedin = ({ size = 24 }) => (
   </svg>
 );
 
-const Social = () => {
+const Social = ({ social }) => {
   return (
     <div className="m-4">
       <p className="my-4">Follow us on</p>
       <div className="flex space-x-5 text-gray-400 dark:text-gray-500">
-        <a
-          href="https://twitter.com/web3templates"
-          target="_blank"
-          rel="noopener"
-        >
+        <a href={social.twitter} target="_blank" rel="noopener">
           <span className="sr-only">Twitter</span>
           <Twitter />
         </a>
-        <a
-          href="https://facebook.com/web3templates"
-          target="_blank"
-          rel="noopener"
-        >
+        <a href={social.facebook} target="_blank" rel="noopener">
           <span className="sr-only">Facebook</span>
           <Facebook />
         </a>
-        <a
-          href="https://instagram.com/web3templates"
-          target="_blank"
-          rel="noopener"
-        >
+        <a href={social.instagram} target="_blank" rel="noopener">
           <span className="sr-only">Instagram</span>
           <Instagram />
         </a>
@@ -87,17 +75,17 @@ const Social = () => {
   );
 };
 
-const InstallOn = () => {
+const InstallOn = ({ download }) => {
   return (
     <div className="flex flex-wrap justify-center">
       <a
-        href="#"
+        href={download.playStore.link}
         target="_blank"
         rel="noopener"
         className="relative block w-40"
       >
         <Image
-          src="/img/getOnPlayStore.png"
+          src={download.playStore.image}
           layout="responsive"
           alt="Android"
           width="70"
@@ -105,13 +93,13 @@ const InstallOn = () => {
         />
       </a>
       <a
-        href="#"
+        href={download.appStore.link}
         target="_blank"
         rel="noopener"
         className="relative block w-40"
       >
         <Image
-          src="/img/appStore.png"
+          src={download.appStore.image}
           layout="responsive"
           alt="Android"
           width="70"
@@ -122,7 +110,7 @@ const InstallOn = () => {
   );
 };
 
-const Footer = ({ theme }) => {
+const Footer = ({ theme, social, download }) => {
   return (
     <div className="flex flex-col m-28 flex-wrap">
       <div className="mx-auto">
@@ -131,8 +119,8 @@ const Footer = ({ theme }) => {
         </Link>
       </div>
       <div className="flex items-center justify-between flex-wrap">
-        <Social />
-        <InstallOn />
+        <Social social={social} />
+        <InstallOn download={download} />
       </div>
       <hr className="border-1 w-4/5 m-auto mt-3" />
       <div className="flex justify-center">

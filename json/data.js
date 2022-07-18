@@ -16,7 +16,7 @@ const data = `{
         "link":"https://www.youtube.com/embed/_CPrYB6Q-HM?controls=0"
     },
     "bannerSoon":{
-        "title": "Available Soon",
+        "title": "Available Very Soon",
         "desc": "You can use this space to highlight your first benefit or a feature of your product. It can also contain an image or Illustration like in the example along with some bullet points.",
         "image": "/img/coc_landscape.png",
         "android": "#",
@@ -113,8 +113,22 @@ const data = `{
         "image": "/img/nt4.png",
         "date":"12.10.2022"
     }
-    
-    ]
+    ],
+    "social": {
+        "instagram": "#",
+        "twitter": "#",
+        "facebook": "#"
+    },
+    "download": {
+        "playStore": {
+            "link": "#",
+            "image": "/img/getOnPlayStore.png"
+        },
+        "appStore": {
+            "link": "#",
+            "image": "/img/appStore.png"
+        }
+    }
   }`;
 
 export default data;

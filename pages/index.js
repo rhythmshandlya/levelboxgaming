@@ -37,13 +37,18 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar data={data.navigation} theme={theme} setTheme={setTheme} />
+      <Navbar
+        data={data.navigation}
+        theme={theme}
+        setTheme={setTheme}
+        social={data.social}
+      />
 
       <Hero data={data.hero} />
 
       <Video data={data.video} />
 
-      <Benefits imgPos="left" data={data.bannerSoon} />
+      <Benefits imgPos="left" data={data.bannerSoon} download={data.download} />
 
       <LatestNews data={data.news} />
 
@@ -63,7 +68,7 @@ export default function Home() {
         })}
       </div>
 
-      <Footer theme={theme} />
+      <Footer theme={theme} social={data.social} download={data.download} />
 
       <PopupWidget />
     </>

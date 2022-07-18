@@ -29,7 +29,7 @@
             "image":"https://cdn.discordapp.com/attachments/773392711713685505/998423115942088765/coc.png",
             "description": "Our dream is to create games that as many people as possible play for many years and that remembered forever.Our dream is to create games that as many people as possible play for many years.",
             "buttonText": "Learn More",
-            "buttonLink": "#"
+            "buttonLink": ""
         },
         {
             "align": "right",
@@ -65,5 +65,20 @@
             "image": "/img/nt4.png",
             "date":"12.10.2022"
         }
-    ]
+    ],
+    "social": {
+        "instagram": "#",
+        "twitter": "#",
+        "facebook": "#"
+    },
+    "download": {
+        "playStore": {
+            "link": "#",
+            "image": "/img/getOnPlayStore.png"
+        },
+        "appStore": {
+            "link": "#",
+            "image": "/img/appStore.png"
+        }
+    }
 }

@@ -6,7 +6,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Navbar({ data, theme, setTheme }) {
+export default function Navbar({ data, theme, setTheme, social }) {
   return (
     <>
       <Disclosure as="nav" className="bg-black">
@@ -59,27 +59,15 @@ export default function Navbar({ data, theme, setTheme }) {
                 </div>
                 <div className="inset-y-0 right-0 flex items-center pr-2 hidden lg:flex sm:pr-0">
                   <div className="flex space-x-5 text-gray-400 dark:text-gray-500">
-                    <a
-                      href="https://twitter.com/web3templates"
-                      target="_blank"
-                      rel="noopener"
-                    >
+                    <a href={social.twitter} target="_blank" rel="noopener">
                       <span className="sr-only">Twitter</span>
                       <Twitter />
                     </a>
-                    <a
-                      href="https://facebook.com/web3templates"
-                      target="_blank"
-                      rel="noopener"
-                    >
+                    <a href={social.facebook} target="_blank" rel="noopener">
                       <span className="sr-only">Facebook</span>
                       <Facebook />
                     </a>
-                    <a
-                      href="https://instagram.com/web3templates"
-                      target="_blank"
-                      rel="noopener"
-                    >
+                    <a href={social.instagram} target="_blank" rel="noopener">
                       <span className="sr-only">Instagram</span>
                       <Instagram />
                     </a>
