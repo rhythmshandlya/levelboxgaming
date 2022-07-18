@@ -1,7 +1,7 @@
 const data = `{
     "navigation": {
         "links":[
-            { "name": "Start Attack", "href": "#", "current": false },
+            { "name": "Stack Attack", "href": "#", "current": false },
             { "name": "News", "href": "#", "current": false },
             { "name": "About Us", "href": "#", "current": false },
             { "name": "Careers", "href": "#", "current": false },

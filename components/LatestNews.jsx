@@ -16,6 +16,8 @@ export function SimpleSlider({ data }) {
     rows: 2,
     pauseOnDotsHover: true,
     pauseOnHover: false,
+    prevArrow: <></>,
+    nextArrow: <></>,
     responsive: [
       {
         breakpoint: 900,
