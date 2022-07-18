@@ -1,5 +1,7 @@
 {
     "navigation": {
+        "logoComputer": "/img/logo-dark.png",
+        "logoMobile": "/img/logo-dark.png",
         "links":[
             { "name": "Start Attack", "href": "#", "current": false },
             { "name": "News", "href": "#", "current": false },
@@ -7,6 +9,38 @@
             { "name": "Careers", "href": "#", "current": false },
             { "name": "Support", "href": "#", "current": false }
         ]
+    },
+    "footer": {
+        "horizontal":[
+            {
+                "title": "Safe and Fair Play",
+                "link": "#"
+            },
+            {
+                "title": "Legal",
+                "link": "#"
+            }
+        ],
+        "vertical": [
+            {
+                "title": "United States",
+                "link": "#"
+            },
+            {
+                "title": "United Kingdom",
+                "link": "#"
+            },
+            {
+                "title": "Canada",
+                "link": "#"
+            },
+            {
+                "title": "China",
+                "link": "#"
+            }
+        ],
+        "copyright": "© LevelBoxGames - All Rights Reserved",
+        "designedBy": "#"
     },
     "hero": {
         "heading": "Stack Attack",
@@ -69,7 +103,8 @@
     "social": {
         "instagram": "#",
         "twitter": "#",
-        "facebook": "#"
+        "facebook": "#",
+        "linkedin": "#"
     },
     "download": {
         "playStore": {

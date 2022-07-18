@@ -68,7 +68,12 @@ export default function Home() {
         })}
       </div>
 
-      <Footer theme={theme} social={data.social} download={data.download} />
+      <Footer
+        data={data.footer}
+        theme={theme}
+        social={data.social}
+        download={data.download}
+      />
 
       <PopupWidget />
     </>

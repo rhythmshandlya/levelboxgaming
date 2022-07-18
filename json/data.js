@@ -1,5 +1,7 @@
 const data = `{
     "navigation": {
+        "logoComputer": "/img/logo-dark.png",
+        "logoMobile": "/img/logo-dark.png",
         "links":[
             { "name": "Stack Attack", "href": "#", "current": false },
             { "name": "News", "href": "#", "current": false },
@@ -8,9 +10,43 @@ const data = `{
             { "name": "Support", "href": "#", "current": false }
         ]
     },
+    "footer": {
+        "horizontal":[
+            {
+                "title": "Safe and Fair Play",
+                "link": "#"
+            },
+            {
+                "title": "Legal",
+                "link": "#"
+            }
+        ],
+        "vertical": [
+            {
+                "title": "United States",
+                "link": "#"
+            },
+            {
+                "title": "United Kingdom",
+                "link": "#"
+            },
+            {
+                "title": "Canada",
+                "link": "#"
+            },
+            {
+                "title": "China",
+                "link": "#"
+            }
+        ],
+        "copyright": "© LevelBoxGames - All Rights Reserved",
+        "designedBy": "#"
+    },
     "hero": {
         "heading": "Stack Attack",
-        "subheading": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit."
+        "subheading": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit.",
+        "preOrder": "#",
+        "explore": "#"
     },
     "video":{
         "link":"https://www.youtube.com/embed/_CPrYB6Q-HM?controls=0"
@@ -117,6 +153,7 @@ const data = `{
     "social": {
         "instagram": "#",
         "twitter": "#",
+        "linkedin": "#",
         "facebook": "#"
     },
     "download": {

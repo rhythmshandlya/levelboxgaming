@@ -66,7 +66,7 @@ const Social = ({ social }) => {
           <span className="sr-only">Instagram</span>
           <Instagram />
         </a>
-        <a href="https://linkedin.com/" target="_blank" rel="noopener">
+        <a href={social.linkedin} target="_blank" rel="noopener">
           <span className="sr-only">Linkedin</span>
           <Linkedin />
         </a>
@@ -110,7 +110,7 @@ const InstallOn = ({ download }) => {
   );
 };
 
-const Footer = ({ theme, social, download }) => {
+const Footer = ({ data, theme, social, download }) => {
   return (
     <div className="flex flex-col m-28 flex-wrap">
       <div className="mx-auto">
@@ -124,18 +124,32 @@ const Footer = ({ theme, social, download }) => {
       </div>
       <hr className="border-1 w-4/5 m-auto mt-3" />
       <div className="flex justify-center">
-        <a className="m-4">Safe and Fair Play</a>
-        <a className="m-4">Legal</a>
+        {data.horizontal.map((element) => {
+          return (
+            <a href={element.link} className="m-4">
+              {element.title}
+            </a>
+          );
+        })}
       </div>
       <div className="flex flex-wrap justify-between text-gray-500 items-end">
         <div className="flex flex-col">
-          <a className="m-1">United States</a>
-          <a className="m-1">United Kingdom</a>
-          <a className="m-1">Canada</a>
-          <a className="m-1">China</a>
+          {data.vertical.map((element) => {
+            return (
+              <a className="m-1" href={element.link}>
+                {element.title}
+              </a>
+            );
+          })}
         </div>
         <div className="">
-          <p>Designed by Dtory | © LevelBoxGames - All Rights Reserved </p>
+          <p>
+            Designed by{" "}
+            <a href={data.designedBy} className="text-gray-500">
+              Dtory
+            </a>{" "}
+            | {data.copyright}
+          </p>
         </div>
       </div>
     </div>
