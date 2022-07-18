@@ -1,4 +1,5 @@
 import React from "react";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 const Banner = ({ data }) => {
   console.clear();
@@ -10,17 +11,25 @@ const Banner = ({ data }) => {
     <>
       <div className="background-coc flex" style={style}>
         <div className="banner-filter"></div>
-        <div
-          className={`relative max-w-[500px] ${
-            data.align == "right" ? "ml-auto mr-0" : ""
+        <AnimationOnScroll
+          animateIn={`animate__fadeIn${
+            data.align == "left" ? "Left" : "Right"
           }`}
+          animateOnce="true"
+          offset={-50}
         >
-          <h2 className="text-white font-bold lg:leading-tight lg:text-4xl dark:text-white">
-            {data.title}
-          </h2>
-          <p className="text-lg">{data.description}</p>
-          <a className="learn-more mt-8">Learn More</a>
-        </div>
+          <div
+            className={`relative max-w-[500px] ${
+              data.align == "right" ? "ml-auto mr-0" : ""
+            }`}
+          >
+            <h2 className="text-white font-bold lg:leading-tight lg:text-4xl dark:text-white">
+              {data.title}
+            </h2>
+            <p className="text-lg">{data.description}</p>
+            <a className="learn-more mt-8">Learn More</a>
+          </div>
+        </AnimationOnScroll>
       </div>
     </>
   );

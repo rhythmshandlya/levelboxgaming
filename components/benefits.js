@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React from "react";
-import Container from "./container";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 const InstallOn = ({ download }) => {
   return (
-    <div className="flex flex-wrap justify-center">
+    <div className="flex flex-wrap">
       <a
         href={download.playStore.link}
         target="_blank"
@@ -40,15 +40,21 @@ const InstallOn = ({ download }) => {
 export default function Benefits({ data, download }) {
   return (
     <>
-      <Container className="flex flex-wrap mb-20 lg:gap-10 lg:flex-nowrap ">
-        <div className={`flex items-center justify-center w-full lg:w-1/2`}>
-          <div>
-            <Image src={data.image} width="521" height="482" alt="Benefits" />
-          </div>
+      <div className="flex flex-wrap justify-start lg:flex-nowrap">
+        <div className={`flex items-start justify-start w-full lg:w-1/2`}>
+          <AnimationOnScroll
+            animateIn="animate__fadeInLeft"
+            animateOnce="true"
+            offset={-50}
+          >
+            <div>
+              <Image src={data.image} width="521" height="482" alt="Benefits" />
+            </div>
+          </AnimationOnScroll>
         </div>
 
         <div className={`flex flex-wrap`}>
-          <div className="flex flex-col items-center mt-4 mx-auto">
+          <div className="flex flex-col items-start lg:mt-32 mx-8 mb-16 lg:mx-0">
             <h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
               {data.title}
             </h3>
@@ -56,11 +62,10 @@ export default function Benefits({ data, download }) {
             <p className="max-w-lg py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">
               {data.desc}
             </p>
+            <InstallOn download={download} />
           </div>
-
-          <InstallOn download={download} />
         </div>
-      </Container>
+      </div>
     </>
   );
 }
