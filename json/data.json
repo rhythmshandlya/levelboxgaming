@@ -22,6 +22,24 @@
         "android": "#",
         "ios": "#"
     },
+    "banners": [
+        {
+            "align": "left",
+            "title": "About us",
+            "image":"https://cdn.discordapp.com/attachments/773392711713685505/998423115942088765/coc.png",
+            "description": "Our dream is to create games that as many people as possible play for many years and that remembered forever.Our dream is to create games that as many people as possible play for many years.",
+            "buttonText": "Learn More",
+            "buttonLink": "#"
+        },
+        {
+            "align": "right",
+            "title": "Meet The Team",
+            "image":"https://cdn.discordapp.com/attachments/773392711713685505/998423116315369603/team.png",
+            "description": "Our dream is to create games that as many people as possible play for many years and that remembered forever.Our dream is to create games that as many people as possible play for many years.",
+            "buttonText": "Learn More",
+            "buttonLink": "#"
+        }
+    ],
     "news": [
         {
             "title":"P.E.K.K.A King Update",

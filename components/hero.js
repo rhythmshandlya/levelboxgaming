@@ -4,7 +4,7 @@ export default function Hero({ data }) {
   return (
     <div className="background-hero">
       <div className="hero-filter"></div>
-      <div className="temp">
+      <div className="relative">
         <Container
           className={`flex w-ful flex-col mt-4 items-center justify-center text-center`}
           style={{ zIndex: 100 }}
