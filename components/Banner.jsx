@@ -12,9 +12,7 @@ const Banner = ({ data }) => {
       <div className="background-coc flex" style={style}>
         <div className="banner-filter"></div>
         <AnimationOnScroll
-          animateIn={`animate__fadeIn${
-            data.align == "left" ? "Left" : "Right"
-          }`}
+          animateIn={`animate__fadeIn`}
           animateOnce="true"
           offset={-50}
         >

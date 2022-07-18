@@ -33,11 +33,7 @@ export function SimpleSlider({ data }) {
   return (
     <div className="flex flex-col align-middle text-center lg:mt-24 mb-10 lg:ml-24 lg:mr-24">
       <h1 className="font-bold lg:mb-14 text-3xl">Latest News</h1>
-      <AnimationOnScroll
-        animateIn="animate__fadeInUp"
-        animateOnce="true"
-        offset={-50}
-      >
+      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce="true">
         <Slider {...settings}>
           {data.map((news) => {
             return (
