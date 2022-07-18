@@ -8,6 +8,7 @@ import PopupWidget from "../components/popupWidget";
 import LatestNews from "../components/LatestNews";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "animate.css/animate.min.css";
 import { useTheme } from "next-themes";
 
 // import useSWR from "swr";
