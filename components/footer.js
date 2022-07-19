@@ -51,7 +51,7 @@ const Linkedin = ({ size = 24 }) => (
 
 const Social = ({ social }) => {
   return (
-    <div className="m-4">
+    <div className="sm:text-center text-center lg:text-left mx-auto">
       <p className="my-4">Follow us on</p>
       <div className="flex space-x-5 text-gray-400 dark:text-gray-500">
         <a href={social.twitter} target="_blank" rel="noopener">
@@ -77,7 +77,7 @@ const Social = ({ social }) => {
 
 const InstallOn = ({ download }) => {
   return (
-    <div className="flex flex-wrap justify-center">
+    <div className="flex flex-wrap justify-center my-12 mx-auto">
       <a
         href={download.playStore.link}
         target="_blank"
@@ -112,45 +112,46 @@ const InstallOn = ({ download }) => {
 
 const Footer = ({ data, theme, social, download }) => {
   return (
-    <div className="flex flex-col m-28 flex-wrap">
+    <div className="flex flex-col m-4 lg:m-20 flex-wrap">
       <div className="mx-auto">
         <Link href="/">
           <img src={`/img/logo-${theme}.png`} alt="LevelBoxGames" />
         </Link>
       </div>
-      <div className="flex items-center justify-between flex-wrap">
+      <div className="flex flex-wrap sm:justify-center lg:justify-between mt-4">
         <Social social={social} />
         <InstallOn download={download} />
       </div>
-      <hr className="border-1 w-4/5 m-auto mt-3" />
-      <div className="flex justify-center">
-        {data.horizontal.map((element) => {
-          return (
-            <a href={element.link} className="m-4">
-              {element.title}
-            </a>
-          );
-        })}
-      </div>
-      <div className="flex flex-wrap justify-between text-gray-500 items-end">
-        <div className="flex flex-col">
-          {data.vertical.map((element) => {
+      <hr className="border-2 bg-gray-500 w-4/5 m-auto mt-3" />
+
+      <div className="flex flex-wrap lg:flex-col justify-between text-gray-500 items-start my-4 lg:mx-20">
+        <div className="flex flex-col lg:flex-row lg:mb-6 lg:mx-auto">
+          {data.right.map((element) => {
             return (
-              <a className="m-1" href={element.link}>
+              <a className="mx-3" href={element.link}>
                 {element.title}
               </a>
             );
           })}
         </div>
-        <div className="">
-          <p>
-            Designed by{" "}
-            <a href={data.designedBy} className="text-gray-500">
-              Dtory
-            </a>{" "}
-            | {data.copyright}
-          </p>
+        <div className="flex flex-col">
+          {data.left.map((element) => {
+            return (
+              <a href={element.link} className="m-1">
+                {element.title}
+              </a>
+            );
+          })}
         </div>
+      </div>
+      <div className="text-center md:hidden mt-4">
+        <p className="text-gray-500">
+          Designed by{" "}
+          <a href={data.designedBy} className="text-gray-500">
+            Dtory
+          </a>
+          <br /> {data.copyright}
+        </p>
       </div>
     </div>
   );
