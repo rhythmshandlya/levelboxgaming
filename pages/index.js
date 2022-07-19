@@ -52,11 +52,11 @@ export default function Home() {
       <Benefits imgPos="left" data={data.bannerSoon} download={data.download} />
 
       <LatestNews data={data.news} />
-
+      <br />
       <div className="text-center">
-        <button className="bg-red-500 w-40 px-3.5 py-2 m-1 border-2 border-red-500 hover:bg-white text-black hover:text-black font-medium rounded  hover:border-red-500">
-          Pre Order
-        </button>
+        <a className="bg-red-500 cursor-pointer w-40 px-3.5 py-2 border-2 border-red-500 hover:bg-white text-white hover:text-black font-medium rounded  hover:border-red-500">
+          News Archives
+        </a>
       </div>
 
       <div className="mt-10 mb-10">

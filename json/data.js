@@ -11,17 +11,33 @@ const data = `{
         ]
     },
     "footer": {
-        "horizontal":[
+        "right":[
             {
-                "title": "Safe and Fair Play",
+                "title": "Terms of Service",
+                "link": "#"
+            },
+            {
+                "title": "Privacy Policy",
+                "link": "#"
+            },
+            {
+                "title": "Parent's Guide",
                 "link": "#"
             },
             {
                 "title": "Legal",
                 "link": "#"
+            },
+            {
+                "title": "Safe and Fair Play",
+                "link": "#"
+            },
+            {
+                "title": "legal",
+                "link": "#"
             }
         ],
-        "vertical": [
+        "left": [
             {
                 "title": "United States",
                 "link": "#"
@@ -150,6 +166,7 @@ const data = `{
         "date":"12.10.2022"
     }
     ],
+    "newsArchive":"#",
     "social": {
         "instagram": "#",
         "twitter": "#",
