@@ -12,7 +12,7 @@ export function SimpleSlider({ data }) {
     slidesToShow: 2,
     slidesToScroll: 2,
     autoPlay: true,
-    autoPlaySpeed: 500,
+    autoplaySpeed: 2000,
     infinite: true,
     rows: 2,
     pauseOnDotsHover: true,
@@ -35,7 +35,7 @@ export function SimpleSlider({ data }) {
       <h1 className="font-bold lg:mb-14 text-3xl">Latest News</h1>
       <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce="true">
         <Slider {...settings}>
-          {data.map((news) => {
+          {data.map((news, i) => {
             return (
               <div>
                 <LatestNewsCard

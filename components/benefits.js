@@ -4,7 +4,7 @@ import { AnimationOnScroll } from "react-animation-on-scroll";
 
 const InstallOn = ({ download }) => {
   return (
-    <div className="flex flex-wrap">
+    <div className="flex flex-wrap justify-center my-2">
       <a
         href={download.playStore.link}
         target="_blank"
@@ -36,7 +36,6 @@ const InstallOn = ({ download }) => {
     </div>
   );
 };
-
 export default function Benefits({ data, download }) {
   return (
     <>
@@ -54,7 +53,7 @@ export default function Benefits({ data, download }) {
         </div>
 
         <div className={`flex flex-wrap`}>
-          <div className="flex flex-col items-start lg:mt-32 mx-8 mb-16 lg:mx-0">
+          <div className="flex flex-col items-start lg:mt-32 mx-5 my-12 lg:mx-0">
             <h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
               {data.title}
             </h3>

@@ -27,7 +27,7 @@ export default function Navbar({ data, theme, setTheme, social }) {
                 <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                   <div className="flex-shrink-0 flex items-center">
                     <img
-                      className="block lg:hidden h-9 w-auto"
+                      className="block lg:hidden h-16 w-auto mx-auto ml-12"
                       src={data.logoMobile}
                       alt="LevelBoxGames"
                     />
@@ -88,24 +88,27 @@ export default function Navbar({ data, theme, setTheme, social }) {
               </div>
             </div>
 
-            <Disclosure.Panel className="sm:hidden">
-              <div className="px-2 pt-2 pb-3 space-y-1">
-                {data.links.map((item) => (
-                  <Disclosure.Button
-                    key={item.name}
-                    as="a"
-                    href={item.href}
-                    className={classNames(
-                      item.current
-                        ? "bg-gray-900 text-white"
-                        : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                      "block px-3 py-2 rounded-md text-base font-medium"
-                    )}
-                    aria-current={item.current ? "page" : undefined}
-                  >
-                    {item.name}
-                  </Disclosure.Button>
-                ))}
+            <Disclosure.Panel className="sm:hidden absolute z-10 h-full w-full backdrop-blur transition ease-in-out delay-150">
+              <div className="flex flex-col justify-between">
+                <div className="px-2 pt-2 pb-3 space-y-1 text-right">
+                  {data.links.map((item) => (
+                    <Disclosure.Button
+                      key={item.name}
+                      as="a"
+                      href={item.href}
+                      className={classNames(
+                        item.current
+                          ? "bg-gray-900 text-white"
+                          : "text-white hover:bg-gray-700 hover:text-white",
+                        "block px-3 py-2 rounded-md text-base font-medium"
+                      )}
+                      aria-current={item.current ? "page" : undefined}
+                    >
+                      {item.name}
+                    </Disclosure.Button>
+                  ))}
+                </div>
+                <div className="text-right mt-40"></div>
               </div>
             </Disclosure.Panel>
           </>
