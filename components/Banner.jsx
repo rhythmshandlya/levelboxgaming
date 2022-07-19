@@ -21,10 +21,10 @@ const Banner = ({ data }) => {
               data.align == "right" ? "ml-auto mr-0" : ""
             }`}
           >
-            <h2 className="text-white font-bold lg:leading-tight lg:text-4xl dark:text-white">
+            <h2 className="text-white font-bold lg:leading-tight lg:text-4xl text-3xl dark:text-white">
               {data.title}
             </h2>
-            <p className="text-lg">{data.description}</p>
+            <p className="text-xl">{data.description}</p>
             <a className="learn-more mt-8">Learn More</a>
           </div>
         </AnimationOnScroll>
