@@ -39,7 +39,7 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
         </Head>
-        <body>
+        <body className="dark:bg-[#040b19]" id="style-4">
           <Main />
           <NextScript />
         </body>

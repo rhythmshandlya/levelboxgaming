@@ -2,8 +2,11 @@ import Container from "./container";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
 export default function Hero({ data }) {
+  const style = {
+    backgroundImage: `url('${data.image}')`,
+  };
   return (
-    <div className="background-hero">
+    <div style={style} className="background-hero">
       <div className="hero-filter"></div>
       <div className="relative">
         <AnimationOnScroll

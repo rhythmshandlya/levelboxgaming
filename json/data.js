@@ -1,5 +1,6 @@
 const data = `{
     "navigation": {
+        "fixed": false,
         "logoComputer": "/img/logo-dark.png",
         "logoMobile": "/img/logo-dark.png",
         "links":[
@@ -62,7 +63,8 @@ const data = `{
         "heading": "Stack Attack",
         "subheading": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit.",
         "preOrder": "#",
-        "explore": "#"
+        "explore": "#",
+        "image":"/img/hero.jpg"
     },
     "video":{
         "link":"https://www.youtube.com/embed/_CPrYB6Q-HM?controls=0"
@@ -143,6 +145,7 @@ const data = `{
     }
     ],
     "newsArchive":"#",
+    "favicon":"/favicon.ico",
     "social": {
         "instagram": "#",
         "twitter": "#",

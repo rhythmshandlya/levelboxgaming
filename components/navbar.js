@@ -9,7 +9,12 @@ function classNames(...classes) {
 export default function Navbar({ data, theme, setTheme, social }) {
   return (
     <>
-      <Disclosure as="nav" className="bg-black">
+      <Disclosure
+        as="nav"
+        className={`lg:dark:backdrop-blur-lg lg:dark:bg-black/20 bg-black z-10 w-full ${
+          data.fixed ? "fixed" : ""
+        }`}
+      >
         {({ open }) => (
           <>
             <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-10 p-1">
@@ -88,7 +93,7 @@ export default function Navbar({ data, theme, setTheme, social }) {
               </div>
             </div>
 
-            <Disclosure.Panel className="sm:hidden absolute z-10 h-full w-full backdrop-blur transition ease-in-out delay-150">
+            <Disclosure.Panel className="sm:hidden backdrop-blur absolute z-10 h-screen w-screen">
               <div className="flex flex-col justify-between">
                 <div className="px-2 pt-2 pb-3 space-y-1 text-right">
                   {data.links.map((item) => (
@@ -122,6 +127,7 @@ export default function Navbar({ data, theme, setTheme, social }) {
 const Twitter = ({ size = 22 }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
+    className="h-6 w-6 hover:text-white"
     width={size}
     height={size}
     viewBox="0 0 24 24"
@@ -134,6 +140,7 @@ const Twitter = ({ size = 22 }) => (
 const Facebook = ({ size = 22 }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
+    className="h-6 w-6 hover:text-white"
     width={size}
     height={size}
     viewBox="0 0 24 24"
@@ -145,6 +152,7 @@ const Facebook = ({ size = 22 }) => (
 const Instagram = ({ size = 22 }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
+    className="h-6 w-6 hover:text-white"
     width={size}
     height={size}
     viewBox="0 0 24 24"
@@ -161,7 +169,7 @@ const Dark = () => {
       className="h-6 w-6"
       fill="none"
       viewBox="0 0 24 24"
-      stroke="grey"
+      stroke="white"
       strokeWidth={2}
     >
       <path
@@ -180,7 +188,7 @@ const Light = () => {
       className="h-6 w-6"
       fill="none"
       viewBox="0 0 24 24"
-      stroke="grey"
+      stroke="white"
       strokeWidth={2}
     >
       <path

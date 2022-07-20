@@ -11,18 +11,11 @@ import "slick-carousel/slick/slick-theme.css";
 import "animate.css/animate.min.css";
 import { useTheme } from "next-themes";
 
-// import useSWR from "swr";
-// const fetcher = (url) => fetch(url).then((res) => res.json());
-
 import staticData from "../json/data";
 import Banner from "../components/Banner";
 import { useEffect } from "react";
 
 export default function Home() {
-  //const { data, error } = useSWR("/api/static", fetcher);
-
-  //if (error) return <div>Failed to load</div>;
-  //if (!data) return <div>Loading</div>;
   const { theme, setTheme } = useTheme();
 
   useEffect(() => {
@@ -31,11 +24,11 @@ export default function Home() {
 
   const data = JSON.parse(staticData);
   return (
-    <>
+    <div className="">
       <Head>
         <title>Level Box Games</title>
         <meta name="description" content="Clash Of Clans: Level Box Games" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href={data.favicon} />
       </Head>
 
       <Navbar
@@ -73,6 +66,6 @@ export default function Home() {
       />
 
       <PopupWidget />
-    </>
+    </div>
   );
 }

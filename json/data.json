@@ -1,5 +1,6 @@
 {
     "navigation": {
+        "fixed": true,
         "logoComputer": "/img/logo-dark.png",
         "logoMobile": "/img/logo-dark.png",
         "links":[
