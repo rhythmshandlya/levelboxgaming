@@ -18,11 +18,11 @@ import { useEffect } from "react";
 export default function Home() {
   const { theme, setTheme } = useTheme();
 
+  const data = JSON.parse(staticData);
   useEffect(() => {
-    setTheme("light");
+    setTheme(data.mode);
   }, []);
 
-  const data = JSON.parse(staticData);
   return (
     <div className="">
       <Head>

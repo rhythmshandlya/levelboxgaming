@@ -78,7 +78,7 @@ export default function Navbar({ data, theme, setTheme, social }) {
                     </a>
                   </div>
                 </div>
-                <span
+                {/* <span
                   className="cursor-pointer ml-4"
                   onClick={() => {
                     if (theme == "light") {
@@ -89,7 +89,7 @@ export default function Navbar({ data, theme, setTheme, social }) {
                   }}
                 >
                   <Switch theme={theme} />
-                </span>
+                </span> */}
               </div>
             </div>
 
