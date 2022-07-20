@@ -126,9 +126,9 @@ const Footer = ({ data, theme, social, download }) => {
         <Social social={social} />
         <InstallOn download={download} />
       </div>
-      <hr className="border-2 bg-gray-500 w-4/5 m-auto mt-3" />
+      <hr className="border-2 bg-gray-500 dark:text-white w-4/5 m-auto mt-3" />
 
-      <div className="flex flex-wrap lg:flex-col justify-between text-gray-500 items-start my-4 lg:mx-20">
+      <div className="flex flex-wrap lg:flex-col justify-between text-gray-500 dark:text-white items-start my-4 lg:mx-20">
         <div className="flex flex-col lg:flex-row lg:mb-6 lg:mx-auto">
           {data.right.map((element) => {
             return (
@@ -149,9 +149,9 @@ const Footer = ({ data, theme, social, download }) => {
         </div>
       </div>
       <div className="text-center md:hidden mt-4">
-        <p className="text-gray-500">
+        <p className="text-gray-500 dark:text-white">
           Designed by{" "}
-          <a href={data.designedBy} className="text-gray-500">
+          <a href={data.designedBy} className="text-gray-500 dark:text-white">
             Dtory
           </a>
           <br /> {data.copyright}
