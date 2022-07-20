@@ -1,5 +1,5 @@
 const data = `{
-    "mode": "dark",
+    "mode": "light",
     "navigation": {
         "fixed": false,
         "logoComputer": "/img/logo-dark.png",
