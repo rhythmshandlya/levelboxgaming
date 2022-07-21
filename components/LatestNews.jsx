@@ -3,18 +3,18 @@ import LatestNewsCard from "./LatestNewsCard";
 import Slider from "react-slick";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
-export function SimpleSlider({ data }) {
+export function SimpleSlider({ data, theme }) {
   var settings = {
     dots: true,
     infinite: true,
     adaptiveHeight: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: theme == "dark" ? 3 : 2,
     slidesToScroll: 2,
     autoPlay: true,
     autoplaySpeed: 2000,
     infinite: true,
-    rows: 2,
+    rows: theme == "dark" ? 1 : 2,
     pauseOnDotsHover: true,
     pauseOnHover: false,
     prevArrow: <></>,
@@ -30,6 +30,12 @@ export function SimpleSlider({ data }) {
       },
     ],
   };
+  if (theme == "dark") {
+    settings.customPaging = function (i) {
+      return <div className="slider"></div>;
+    };
+  }
+
   return (
     <div className="flex flex-col align-middle text-center lg:mt-24 mb-10 lg:ml-24 lg:mr-24">
       <h1 className="font-bold lg:mb-14 text-3xl">Latest News</h1>

@@ -24,11 +24,6 @@
     opacity: 0.3;
 }
 
-.slick-dots li button:before
-{
-    font-size: 15px !important;
-    color: #975251 !important;
-}
 
 .background-coc{
     background-size: cover;
@@ -43,6 +38,10 @@
     color: white;
     position: relative;
 }
+
+
+
+/**/
 .banner-filter{
     position: absolute;
     left: 0px;
@@ -52,6 +51,7 @@
     background-color: black;
     opacity: 0.7;
 }
+
 .learn-more{
     display: flex;
     flex-direction: row;
@@ -87,3 +87,23 @@
 	border: 2px solid #555555;
 }
 
+.slick-dots li button:before
+{
+    font-size: 15px !important;
+    color: #975251 !important;
+}
+
+.slider{
+    width: 40px;
+    height: 15px;
+    background-color: #434853 !important;
+}
+
+.slick-active .slider{
+    background-color: white !important;
+    z-index: 2 !important;
+}
+
+.slick-dots::nth-child(1) li div{
+    border-radius: 5px !important;
+}

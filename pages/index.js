@@ -44,7 +44,7 @@ export default function Home() {
 
       <Benefits imgPos="left" data={data.bannerSoon} download={data.download} />
 
-      <LatestNews data={data.news} />
+      <LatestNews data={data.news} theme={theme} />
       <br />
       <div className="text-center">
         <a className="bg-red-500 cursor-pointer w-40 px-3.5 py-2 border-2 border-red-500 hover:bg-white text-white hover:text-black font-medium rounded  hover:border-red-500">
