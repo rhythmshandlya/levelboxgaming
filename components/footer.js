@@ -119,7 +119,7 @@ const Footer = ({ data, theme, social, download }) => {
     <div className="flex flex-col m-4 lg:m-20 flex-wrap">
       <div className="mx-auto">
         <Link href="/">
-          <img src={`/img/logo-${theme}.png`} alt="LevelBoxGames" />
+          <img src={data.image} alt="LevelBoxGames" />
         </Link>
       </div>
       <div className="flex flex-wrap sm:justify-center lg:justify-between mt-4">

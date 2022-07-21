@@ -1,7 +1,7 @@
 const data = `{
     "mode": "light",
     "navigation": {
-        "fixed": false,
+        "fixed": true,
         "logoComputer": "/img/logo-dark.png",
         "logoMobile": "/img/logo-dark.png",
         "links":[
@@ -58,7 +58,8 @@ const data = `{
             }
         ],
         "copyright": "© LevelBoxGames - All Rights Reserved",
-        "designedBy": "#"
+        "designedBy": "#",
+        "image":"/img/logo-dark.png"
     },
     "hero": {
         "heading": "Stack Attack",

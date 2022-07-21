@@ -11,7 +11,7 @@ export default function Navbar({ data, theme, setTheme, social }) {
     <>
       <Disclosure
         as="nav"
-        className={`lg:dark:backdrop-blur-lg lg:dark:bg-black/20 bg-black z-10 w-full ${
+        className={`lg:dark:backdrop-blur-lg lg:dark:bg-black/10 bg-black z-10 w-full ${
           data.fixed ? "fixed" : ""
         }`}
       >
