@@ -2,7 +2,7 @@
 import Image from "next/image";
 const LatestNewsCard = (props) => {
   return (
-    <div className="object-contain text-center m-6 max-w-sm mx-auto ">
+    <div className="object-contain text-center m-6 max-w-xs mx-auto">
       <div className="w-fit bg-[#092140] rounded-2xl p-8">
         <Image
           //   loader={myLoader}
