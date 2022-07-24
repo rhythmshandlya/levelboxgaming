@@ -14,6 +14,7 @@ import { useTheme } from "next-themes";
 import staticData from "../json/data";
 import Banner from "../components/Banner";
 import { useEffect } from "react";
+import ConceptArt from "../components/ConceptArt";
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
@@ -45,12 +46,7 @@ export default function Home() {
       <Benefits imgPos="left" data={data.bannerSoon} download={data.download} />
 
       <LatestNews data={data.news} theme={theme} />
-      <br />
-      <div className="text-center">
-        <a className="bg-red-500 cursor-pointer w-40 px-3.5 py-2 border-2 border-red-500 hover:bg-white text-white hover:text-black font-medium rounded  hover:border-red-500">
-          News Archives
-        </a>
-      </div>
+      <ConceptArt data={data.news} theme={theme} />
 
       <div className="mt-10 mb-10">
         {data.banners.map((banner, i) => {

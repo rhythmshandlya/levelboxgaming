@@ -9,7 +9,7 @@ export function SimpleSlider({ data, theme }) {
     infinite: true,
     adaptiveHeight: true,
     speed: 500,
-    slidesToShow: theme == "dark" ? 3 : 2,
+    slidesToShow: theme == "dark" ? 2 : 2,
     slidesToScroll: 2,
     autoPlay: true,
     autoplaySpeed: 2000,
@@ -30,15 +30,10 @@ export function SimpleSlider({ data, theme }) {
       },
     ],
   };
-  if (theme == "dark") {
-    settings.customPaging = function (i) {
-      return <div className="slider"></div>;
-    };
-  }
 
   return (
-    <div className="flex flex-col align-middle text-center lg:mt-24 mb-10 lg:ml-24 lg:mr-24">
-      <h1 className="font-bold lg:mb-14 text-3xl">Latest News</h1>
+    <div className="flex flex-col align-middle text-center my-40">
+      <h1 className="lg:mb-14 text-3xl">Concept Art</h1>
       <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce="true">
         <Slider {...settings}>
           {data.map((news, i) => {
