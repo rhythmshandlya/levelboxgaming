@@ -5,9 +5,11 @@ const ConceptArt = ({ data }) => {
   return (
     <div className="my-40">
       <div className="md:my-16">
-        <h1 className="text-center text-3xl">Latest News & Press </h1>
+        <h1 className="text-center font-semibold text-3xl">
+          Latest News & Press{" "}
+        </h1>
         <div
-          className="overflow-x-scroll flex md:mx-40 my-10 mx-5"
+          className="overflow-x-scroll flex md:mx-10 my-10 mx-5"
           id="style-2"
         >
           {data.map((news, i) => {

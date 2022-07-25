@@ -2,7 +2,7 @@
 import Image from "next/image";
 const ConceptArtCard = (props) => {
   return (
-    <div class="w-[350px] md:w-[400px] lg:w-[450px] overflow-hidden shadow-lg bg-[#434852] rounded-[30px] mb-6">
+    <div class="w-[350px] md:w-[400px] lg:w-[480px] overflow-hidden shadow-lg bg-[#434852] rounded-[30px] mb-6">
       <div>
         <img
           class="w-full"

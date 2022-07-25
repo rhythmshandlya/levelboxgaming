@@ -47,7 +47,12 @@ export default function Benefits({ data, download }) {
             offset={-50}
           >
             <div>
-              <Image src={data.image} width="521" height="482" alt="Benefits" />
+              <img
+                src={data.image}
+                width="521px"
+                height="482px"
+                alt="Benefits"
+              />
             </div>
           </AnimationOnScroll>
         </div>
