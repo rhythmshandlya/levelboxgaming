@@ -2,40 +2,27 @@ import React, { useState } from "react";
 import LatestNewsCard from "./LatestNewsCard";
 import Slider from "react-slick";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-const ArrowRight = ({ className, style, onClick }) => (
-  <button
-    style={{ ...style, left: "52%", top: "480px" }}
-    onClick={onClick}
-    className={className}
-  >
-    <FontAwesomeIcon icon="fas fa-arrow-circle-right" />
-  </button>
-);
-const ArrowLeft = ({ className, style, onClick }) => (
-  <button
-    style={{ ...style, left: "48%", top: "480px" }}
-    onClick={onClick}
-    className={className}
-  >
-    <div>back</div>
-  </button>
-);
+import {
+  faCircleArrowLeft,
+  faCircleArrowRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 export function SimpleSlider({ data, theme }) {
+  const slider = React.useRef(null);
+
   var settings = {
     dots: theme == "dark" ? false : true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: theme == "dark" ? 3 : 2,
+    infinite: true,
+    speed: 400,
+    slidesToShow: 3,
     slidesToScroll: 1,
     rows: theme == "dark" ? 1 : 2,
     pauseOnDotsHover: true,
-    pauseOnHover: false,
     centerMode: true,
-    prevArrow: <ArrowLeft />,
-    nextArrow: <ArrowRight />,
+    prevArrow: <></>,
+    nextArrow: <></>,
     responsive: [
       {
         breakpoint: 900,
@@ -49,13 +36,13 @@ export function SimpleSlider({ data, theme }) {
   };
 
   return (
-    <div className="flex flex-col align-middle text-center my-40 ">
+    <div className="flex flex-col align-middle text-center my-40">
       <h1 className="text-3xl">Concept Art</h1>
       <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce="true">
-        <Slider {...settings}>
+        <Slider ref={slider} {...settings}>
           {data.map((news, i) => {
             return (
-              <div className="my-20">
+              <div className="my-20 mx-14">
                 <LatestNewsCard
                   imageSrc={news.image}
                   title={news.title}
@@ -65,24 +52,24 @@ export function SimpleSlider({ data, theme }) {
               </div>
             );
           })}
-          <div className="my-20 opacity-0">
-            <LatestNewsCard
-              imageSrc={data[0].image}
-              title={data[0].title}
-              date={data[0].date}
-              summary={data[0].description}
-            />
-          </div>
-          <div className="my-20 opacity-0">
-            <LatestNewsCard
-              imageSrc={data[0].image}
-              title={data[0].title}
-              date={data[0].date}
-              summary={data[0].description}
-            />
-          </div>
         </Slider>
       </AnimationOnScroll>
+      <div className="flex justify-center">
+        <button
+          className="p-3 "
+          style={{ outline: "none" }}
+          onClick={() => slider?.current?.slickPrev()}
+        >
+          <FontAwesomeIcon icon={faCircleArrowLeft} size="2x" color="white" />
+        </button>
+        <button
+          style={{ outline: "none" }}
+          className="p-3 focus:outline-0 outline-inherit"
+          onClick={() => slider?.current?.slickNext()}
+        >
+          <FontAwesomeIcon icon={faCircleArrowRight} size="2x" color="white" />
+        </button>
+      </div>
     </div>
   );
 }

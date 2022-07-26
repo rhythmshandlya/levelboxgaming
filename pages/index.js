@@ -10,6 +10,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "animate.css/animate.min.css";
 import { useTheme } from "next-themes";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 
 import staticData from "../json/data";
 import Banner from "../components/Banner";

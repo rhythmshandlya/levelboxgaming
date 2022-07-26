@@ -132,4 +132,17 @@
     transition: all .3s ease-in-out;
 }
 
+.fa-circle-arrow-right:hover{ 
+    color: gray;
+    text-shadow: 0 0 3px gray;
+    transform: scale(1.20); 
+    transition: all .2s ease-in-out;
+}
+  
+.fa-circle-arrow-left:hover{ 
+    color: gray;
+    text-shadow: 0 0 3px gray;
+    transform: scale(1.20); 
+    transition: all .2s ease-in-out;
+}
   
