@@ -30,7 +30,6 @@ export function SimpleSlider({ data, theme }) {
     speed: 500,
     slidesToShow: theme == "dark" ? 3 : 2,
     slidesToScroll: 1,
-    autoplaySpeed: 2000,
     rows: theme == "dark" ? 1 : 2,
     pauseOnDotsHover: true,
     pauseOnHover: false,
@@ -66,17 +65,21 @@ export function SimpleSlider({ data, theme }) {
               </div>
             );
           })}
-          <div className="w-fit opacity-0 rounded-2xl sm:w-[300px] md:w-[350px] mx-auto">
-            <img
-              class="w-full rounded-[30px]"
-              src={data[0].imageSrc}
-              alt="Sunset in the mountains"
+          <div className="my-20 opacity-0">
+            <LatestNewsCard
+              imageSrc={data[0].image}
+              title={data[0].title}
+              date={data[0].date}
+              summary={data[0].description}
             />
-            <div className="flex flex-col content-center flex-wrap w-full text-low">
-              <p className="text-xs font-normal break-normal">
-                {data[0].summary}
-              </p>
-            </div>
+          </div>
+          <div className="my-20 opacity-0">
+            <LatestNewsCard
+              imageSrc={data[0].image}
+              title={data[0].title}
+              date={data[0].date}
+              summary={data[0].description}
+            />
           </div>
         </Slider>
       </AnimationOnScroll>
