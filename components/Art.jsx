@@ -30,6 +30,7 @@ export function SimpleSlider({ data, theme }) {
           slidesToShow: 1,
           slidesToScroll: 1,
           rows: 1,
+          centerPadding: "30px",
         },
       },
     ],
@@ -42,7 +43,7 @@ export function SimpleSlider({ data, theme }) {
         <Slider ref={slider} {...settings}>
           {data.map((news, i) => {
             return (
-              <div className="my-20">
+              <div className="md:my-20 my-10">
                 <LatestNewsCard
                   imageSrc={news.image}
                   title={news.title}

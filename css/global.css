@@ -120,14 +120,6 @@
     transform: scale(1.50); 
 }
 
-.slick-center .text-low{
-    padding-top: 60px;
-}
-
-.slick-active .text-low{
-    transition: all .3s ease-in-out;
-} 
-
 .slick-active img{
     transition: all .3s ease-in-out;
 }
@@ -146,6 +138,11 @@
     transition: all .2s ease-in-out;
 }
 
+
+.slick-center .text-low{
+    padding-top: 45px;
+}
+
 @media only screen and (min-width: 800px){
     .slick-list {
         margin: 0 -30px !important;
@@ -154,10 +151,11 @@
       .slick-slide > div {
         padding: 0 120px !important;
       }
-}
-
-@media only screen and (max-width: 700px){
-    .slick-track {
-        margin:auto;
+      .slick-center .text-low{
+        padding-top: 60px;
     }
+    
+    .slick-active .text-low{
+        transition: all .3s ease-in-out;
+    } 
 }
