@@ -37,7 +37,7 @@ export function SimpleSlider({ data, theme }) {
   };
 
   return (
-    <div className="flex flex-col align-middle text-center my-40">
+    <div className="flex flex-col align-middle text-center md:my-40 my-10">
       <h1 className="text-3xl">Concept Art</h1>
       <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce="true">
         <Slider ref={slider} {...settings}>
