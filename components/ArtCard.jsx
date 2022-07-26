@@ -1,7 +1,7 @@
 // import React from 'react'
 const LatestNewsCard = (props) => {
   return (
-    <div className="w-fit rounded-2xl sm:w-[300px] md:w-[360px] mx-auto">
+    <div className="w-fit rounded-2xl w-[180px] md:w-[360px] mx-auto p-3">
       <img
         class="w-full rounded-[30px]"
         src={props.imageSrc}

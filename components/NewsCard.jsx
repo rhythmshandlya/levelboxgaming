@@ -1,5 +1,4 @@
 // import React from 'react'
-import Image from "next/image";
 const ConceptArtCard = (props) => {
   return (
     <div class="w-[350px] md:w-[400px] lg:w-[480px] overflow-hidden shadow-lg bg-[#434852] rounded-[30px] mb-6">
@@ -10,9 +9,9 @@ const ConceptArtCard = (props) => {
           alt="Sunset in the mountains"
         />
         <div class="px-10 py-6">
-          <div className="flex justify-between align-middle">
+          <div className="flex justify-between m-2">
             <div class="font-semibold text-xl mb-2">{props.title}</div>
-            <p class="text-white text-base">{props.date}</p>
+            <p class="text-white text-base my-auto">{props.date}</p>
           </div>
           <p class="text-white text-base">{props.summary}</p>
         </div>

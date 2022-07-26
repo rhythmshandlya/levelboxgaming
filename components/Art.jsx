@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import LatestNewsCard from "./ArtCard";
 import Slider from "react-slick";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCircleArrowLeft,
@@ -24,7 +25,7 @@ export function SimpleSlider({ data, theme }) {
     nextArrow: <></>,
     responsive: [
       {
-        breakpoint: 900,
+        breakpoint: 800,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -41,7 +42,7 @@ export function SimpleSlider({ data, theme }) {
         <Slider ref={slider} {...settings}>
           {data.map((news, i) => {
             return (
-              <div className="mt-20 mb-5 mx-14">
+              <div className="my-20">
                 <LatestNewsCard
                   imageSrc={news.image}
                   title={news.title}
