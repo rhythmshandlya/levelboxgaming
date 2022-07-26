@@ -5,7 +5,7 @@ import Video from "../components/video";
 import Benefits from "../components/benefits";
 import Footer from "../components/footer";
 import PopupWidget from "../components/popupWidget";
-import LatestNews from "../components/LatestNews";
+import LatestNews from "../components/News";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "animate.css/animate.min.css";
@@ -15,7 +15,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import staticData from "../json/data";
 import Banner from "../components/Banner";
 import { useEffect } from "react";
-import ConceptArt from "../components/ConceptArt";
+import ConceptArt from "../components/Art";
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
@@ -46,8 +46,8 @@ export default function Home() {
 
       <Benefits imgPos="left" data={data.bannerSoon} download={data.download} />
 
-      <LatestNews data={data.news} theme={theme} />
       <ConceptArt data={data.news} theme={theme} />
+      <LatestNews data={data.news} theme={theme} />
 
       <div className="mt-10 mb-10">
         {data.banners.map((banner, i) => {
