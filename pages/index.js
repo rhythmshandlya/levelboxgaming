@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Hero from "../components/hero";
 import Navbar from "../components/navbar";
 import Video from "../components/video";
@@ -12,7 +11,7 @@ import "animate.css/animate.min.css";
 import { useTheme } from "next-themes";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
-import staticData from "../json/data";
+import data from "../json/data.json";
 import Banner from "../components/Banner";
 import { useEffect } from "react";
 import ConceptArt from "../components/Art";
@@ -20,27 +19,15 @@ import ConceptArt from "../components/Art";
 export default function Home() {
   const { theme, setTheme } = useTheme();
 
-  const data = JSON.parse(staticData);
   useEffect(() => {
     setTheme(data.mode);
   }, []);
 
   return (
     <div className="">
-      <Head>
-        <title>Level Box Games</title>
-        <meta name="description" content="Clash Of Clans: Level Box Games" />
-        <link rel="icon" href={data.favicon} />
-      </Head>
+      <Navbar />
 
-      <Navbar
-        data={data.navigation}
-        theme={theme}
-        setTheme={setTheme}
-        social={data.social}
-      />
-
-      <Hero data={data.hero} />
+      <Hero />
 
       <Video data={data.video} />
 

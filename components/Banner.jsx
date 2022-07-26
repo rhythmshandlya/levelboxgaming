@@ -2,7 +2,6 @@ import React from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
 const Banner = ({ data }) => {
-  console.clear();
   console.log(data.image);
   const style = {
     backgroundImage: `url('${data.image}')`,

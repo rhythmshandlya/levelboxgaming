@@ -5,11 +5,11 @@
         "logoComputer": "/img/logo-dark.png",
         "logoMobile": "/img/logo-dark.png",
         "links":[
-            { "name": "Stack Attack", "href": "#", "current": false },
-            { "name": "News", "href": "#", "current": false },
-            { "name": "About Us", "href": "#", "current": false },
-            { "name": "Careers", "href": "#", "current": false },
-            { "name": "Support", "href": "#", "current": false }
+            { "name": "stack", "href": "#", "current": false },
+            { "name": "news", "href": "#", "current": false },
+            { "name": "about", "href": "#", "current": false },
+            { "name": "carrier", "href": "#", "current": false },
+            { "name": "support", "href": "#", "current": false }
         ]
     },
     "footer": {
@@ -116,35 +116,23 @@
           "date":"8.10.2022"
       },
       {
-          "title":"Clash Royals Season 20",
-          "description": "Our dream is to create games that as many people as possible play for many years and that remembered.",
-          "image": "/img/nt4.png",
-          "date":"12.10.2022"
-      },
-      {
         "title":"P.E.K.K.A King Update",
         "description": "Our dream is to create games that as many people as possible play for many years and that remembered.",
         "image": "/img/nt1.png",
         "date": "7.09.2022"
-    },
-    {
+        },
+        {
         "title":"Skeleton King Skin",
         "description":"Our dream is to create games that as many people as possible play for many years and that remembered.",
         "image":"/img/nt2.png",
         "date":"6.09.2022"
-    },
-    {
-        "title":"Clash Royals Season 20",
+        },
+        {
+        "title":"Angry Birds Journey",
         "description": "Our dream is to create games that as many people as possible play for many years and that remembered.",
-        "image": "/img/nt4.png",
-        "date":"12.10.2022"
-    },
-    {
-        "title":"Clash Royals Season 20",
-        "description": "Our dream is to create games that as many people as possible play for many years and that remembered.",
-        "image": "/img/nt4.png",
-        "date":"12.10.2022"
-    }
+        "image": "/img/nt3.png",
+        "date":"8.10.2022"
+        }
     ],
     "newsArchive":"#",
     "favicon":"/favicon.ico",
@@ -164,4 +152,4 @@
             "image": "/img/appStore.png"
         }
     }
-  }
+}

@@ -1,12 +1,15 @@
 import Container from "./container";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import useData from "./hooks/useData";
 
-export default function Hero({ data }) {
+export default function Hero() {
+  const { hero } = useData();
+
   const style = {
-    backgroundImage: `url('${data.image}')`,
+    backgroundImage: `url('${hero.image}')`,
   };
   return (
-    <div style={style} className="background-hero">
+    <div style={style} className="background-hero" id="hero">
       <div className="hero-filter"></div>
       <div className="relative">
         <AnimationOnScroll
@@ -19,10 +22,10 @@ export default function Hero({ data }) {
             style={{ zIndex: 100 }}
           >
             <h2 className="max-w-2xl mt-3 text-3xl font-semibold leading-snug tracking-tight text-white lg:leading-tight lg:text-4xl dark:text-white">
-              {data.heading}
+              {hero.heading}
             </h2>
             <p className="max-w-xl py-4 text-lg leading-normal text-white lg:text-xl xl:text-xl dark:text-gray-300">
-              {data.subheading}
+              {hero.subheading}
             </p>
             <div className="flex flex-wrap justify-center">
               <button className="bg-red-500 w-40 px-3.5 py-2 m-1 hover:bg-white text-white hover:text-black font-medium rounded">
