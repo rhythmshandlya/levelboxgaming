@@ -42,7 +42,7 @@ export function SimpleSlider({ data, theme }) {
         <Slider ref={slider} {...settings}>
           {data.map((news, i) => {
             return (
-              <div className="my-20 mx-14">
+              <div className="mt-20 mb-5 mx-14">
                 <LatestNewsCard
                   imageSrc={news.image}
                   title={news.title}
