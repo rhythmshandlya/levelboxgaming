@@ -66,6 +66,18 @@ export function SimpleSlider({ data, theme }) {
               </div>
             );
           })}
+          <div className="w-fit opacity-0 rounded-2xl sm:w-[300px] md:w-[350px] mx-auto">
+            <img
+              class="w-full rounded-[30px]"
+              src={data[0].imageSrc}
+              alt="Sunset in the mountains"
+            />
+            <div className="flex flex-col content-center flex-wrap w-full text-low">
+              <p className="text-xs font-normal break-normal">
+                {data[0].summary}
+              </p>
+            </div>
+          </div>
         </Slider>
       </AnimationOnScroll>
     </div>
