@@ -1,3 +1,6 @@
+body{
+    overflow-x: hidden
+}
 .background-hero{
     background-size: cover;
     background-position: center;
