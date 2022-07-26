@@ -23,6 +23,7 @@ export function SimpleSlider({ data, theme }) {
     centerMode: true,
     prevArrow: <></>,
     nextArrow: <></>,
+    centerPadding: "0",
     responsive: [
       {
         breakpoint: 800,
@@ -37,13 +38,13 @@ export function SimpleSlider({ data, theme }) {
   };
 
   return (
-    <div className="flex flex-col align-middle text-center md:my-40 my-10">
-      <h1 className="text-3xl">Concept Art</h1>
+    <div className="flex flex-col align-middle text-center md:mt-36 my-10">
+      <h1 className="text-3xl font-semibold">Concept Art</h1>
       <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce="true">
         <Slider ref={slider} {...settings}>
           {data.map((news, i) => {
             return (
-              <div className="md:my-20 my-10">
+              <div className="md:mb-5 md:mt-20 my-10">
                 <LatestNewsCard
                   imageSrc={news.image}
                   title={news.title}

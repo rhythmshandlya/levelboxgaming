@@ -3,7 +3,7 @@ import ConceptArtCard from "./NewsCard";
 
 const ConceptArt = ({ data }) => {
   return (
-    <div className="md:my-40 my-20">
+    <div className="md:my-36 my-20">
       <div className="md:my-16">
         <h1 className="text-center font-semibold text-3xl">
           Latest News & Press{" "}

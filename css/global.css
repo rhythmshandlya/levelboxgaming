@@ -147,14 +147,7 @@ body{
 }
 
 @media only screen and (min-width: 800px){
-    .slick-list {
-        margin: 0 -30px !important;
-      }
-      
-      .slick-slide > div {
-        padding: 0 120px !important;
-      }
-      .slick-center .text-low{
+    .slick-center .text-low{
         padding-top: 60px;
     }
     
