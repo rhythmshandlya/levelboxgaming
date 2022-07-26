@@ -11,7 +11,7 @@ const ConceptArtCard = (props) => {
         />
         <div class="px-10 py-6">
           <div className="flex justify-between align-middle">
-            <div class="font-bold text-xl mb-2">{props.title}</div>
+            <div class="font-semibold text-xl mb-2">{props.title}</div>
             <p class="text-white text-base">{props.date}</p>
           </div>
           <p class="text-white text-base">{props.summary}</p>
