@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import LatestNewsCard from "./LatestNewsCard";
 import Slider from "react-slick";
 import { AnimationOnScroll } from "react-animation-on-scroll";
@@ -26,14 +26,11 @@ const ArrowLeft = ({ className, style, onClick }) => (
 export function SimpleSlider({ data, theme }) {
   var settings = {
     dots: theme == "dark" ? false : true,
-    infinite: true,
-    adaptiveHeight: true,
+    infinite: false,
     speed: 500,
     slidesToShow: theme == "dark" ? 3 : 2,
     slidesToScroll: 1,
-    autoPlay: true,
     autoplaySpeed: 2000,
-    infinite: true,
     rows: theme == "dark" ? 1 : 2,
     pauseOnDotsHover: true,
     pauseOnHover: false,

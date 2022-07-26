@@ -126,19 +126,25 @@ const data = `{
         "description":"Our dream is to create games that as many people as possible play for many years and that remembered.",
         "image":"/img/nt2.png",
         "date":"6.09.2022"
-    },
-    {
+      },
+      {
         "title":"Angry Birds Journey",
         "description": "Our dream is to create games that as many people as possible play for many years and that remembered.",
         "image": "/img/nt3.png",
         "date":"8.10.2022"
-    },
-    {
+      },
+      {
         "title":"Clash Royals Season",
         "description": "Our dream is to create games that as many people as possible play for many years and that remembered.",
         "image": "/img/nt4.png",
         "date":"12.10.2022"
-    }
+      },
+      {
+        "title":"Clash Royals Season",
+        "description": "Our dream is to create games that as many people as possible play for many years and that remembered.",
+        "image": "/img/nt4.png",
+        "date":"12.10.2022"
+      }
     ],
     "newsArchive":"#",
     "favicon":"/favicon.ico",
