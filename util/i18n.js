@@ -16,7 +16,7 @@ i18next
       order: ["cookie", "path", "htmlTag"],
       caches: ["cookie"],
     },
-    // react: { useSuspense: false },
+    react: { useSuspense: false },
     backend: {
       loadPath: "/json/{{lng}}.json",
     },
