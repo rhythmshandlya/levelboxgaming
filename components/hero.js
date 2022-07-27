@@ -1,4 +1,3 @@
-import Container from "./container";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import useData from "./hooks/useData";
 import { useTranslation } from "react-i18next";
@@ -19,7 +18,7 @@ export default function Hero() {
           animateOnce="true"
           offset={-50}
         >
-          <Container
+          <div
             className={`flex w-ful flex-col mt-4 items-center justify-center text-center`}
             style={{ zIndex: 100 }}
           >
@@ -46,7 +45,7 @@ export default function Hero() {
                 </span>
               </a>
             </div>
-          </Container>
+          </div>
         </AnimationOnScroll>
       </div>
     </div>

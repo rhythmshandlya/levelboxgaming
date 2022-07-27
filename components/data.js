@@ -1,7 +1,4 @@
 import {
-  EmojiHappyIcon,
-  ChartSquareBarIcon,
-  CursorClickIcon,
   DeviceMobileIcon,
   AdjustmentsIcon,
   SunIcon,

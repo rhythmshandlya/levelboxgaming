@@ -3,10 +3,11 @@ import React from "react";
 import useData from "./hooks/useData";
 import Social from "./Icons/Social";
 import InstallOn from "./Icons/InstallOn";
-import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
   const { footer, social, download } = useData();
+  const { t } = useTranslation();
 
   return (
     <div className="flex flex-col m-4 lg:m-20 flex-wrap">
@@ -23,18 +24,18 @@ const Footer = () => {
 
       <div className="flex flex-wrap lg:flex-col justify-between text-gray-500 dark:text-white items-start my-4 lg:mx-20">
         <div className="flex flex-col lg:flex-row lg:mb-6 lg:mx-auto">
-          {footer.right.map((element) => {
+          {footer.right.map((element, i) => {
             return (
-              <a className="mx-3" href={element.link}>
+              <a className="mx-3" key={i} href={element.link}>
                 {t(element.title)}
               </a>
             );
           })}
         </div>
         <div className="flex flex-col">
-          {footer.left.map((element) => {
+          {footer.left.map((element, i) => {
             return (
-              <a href={element.link} className="m-1">
+              <a href={element.link} key={i} className="m-1">
                 {t(element.title)}
               </a>
             );

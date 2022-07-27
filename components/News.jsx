@@ -1,11 +1,11 @@
-import { t } from "i18next";
-import { useTheme } from "next-themes";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import useData from "./hooks/useData";
 import NewsCard from "./NewsCard";
 
 const ConceptArt = ({ data }) => {
-  const { theme } = useTheme();
+  const { t } = useTranslation();
+
   const { news } = useData();
   return (
     <div className="md:my-36 my-20">
@@ -19,7 +19,7 @@ const ConceptArt = ({ data }) => {
         >
           {news.map((news, i) => {
             return (
-              <div className="md:m-10 m-4">
+              <div key={i} className="md:m-10 m-4">
                 <NewsCard
                   imageSrc={news.image}
                   title={news.title}

@@ -1,32 +1,39 @@
 import i18next from "i18next";
 import { initReactI18next } from "react-i18next";
-import HttpApi from "i18next-http-backend";
+// import SyncBackend from "i18next-sync-fs-backend";
+import FetchBackend from "i18next-fetch-backend";
+import fetch from "isomorphic-fetch";
 import LanguageDetector from "i18next-browser-languagedetector";
 
 i18next
-  .use(HttpApi)
+  .use(FetchBackend)
   .use(LanguageDetector)
   .use(initReactI18next)
-  .init({
-    supportedLngs: ["en", "ar", "fr"],
-    fallbackLng: "en",
-    debug: false,
-    // Options for language detector
-    detection: {
-      order: ["cookie", "path", "htmlTag"],
-      caches: ["cookie"],
+  .init(
+    {
+      supportedLngs: ["en", "ar", "fr"],
+      fallbackLng: "en",
+      detection: {
+        order: ["cookie", "path", "htmlTag"],
+        caches: ["cookie"],
+      },
+      saveMissing: true,
+      interpolation: {
+        escapeValue: false,
+      },
+      useLocalStorage: true,
+      useDataAttrOptions: true,
+      react: {
+        useSuspense: false,
+      },
+      backend: {
+        loadPath: "/json/{{lng}}.json",
+        fetch,
+      },
     },
-    saveMissing: true,
-    interpolation: {
-      escapeValue: false,
-    },
-    react: {
-      wait: true,
-      useSuspense: false,
-    },
-    backend: {
-      loadPath: "/json/{{lng}}.json",
-    },
-  });
+    () => {
+      console.log("Hello Loaded!");
+    }
+  );
 
 export default i18next;

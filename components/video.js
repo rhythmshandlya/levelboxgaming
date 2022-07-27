@@ -1,11 +1,10 @@
-import Container from "./container";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import useData from "./hooks/useData";
 
 export default function Video() {
   const { video } = useData();
   return (
-    <Container>
+    <div>
       <AnimationOnScroll
         animateIn="animate__fadeIn"
         animateOnce="true"
@@ -16,13 +15,13 @@ export default function Video() {
             <iframe
               src={video.link}
               title="YouTube video player"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           </div>
         </div>
       </AnimationOnScroll>
-    </Container>
+    </div>
   );
 }

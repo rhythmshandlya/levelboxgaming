@@ -51,9 +51,9 @@ export default function Navbar() {
                   </div>
                   <div className="hidden sm:block sm:ml-8">
                     <div className="flex mt-3 space-x-3">
-                      {navigation.links.map((item) => (
+                      {navigation.links.map((item, i) => (
                         <a
-                          key={item.name}
+                          key={i}
                           href={item.href}
                           className={classNames(
                             item.current
@@ -91,9 +91,9 @@ export default function Navbar() {
             <Disclosure.Panel className="sm:hidden backdrop-blur absolute z-10 h-screen w-screen">
               <div className="flex flex-col justify-between">
                 <div className="px-2 pt-2 pb-3 space-y-1 text-right">
-                  {navigation.links.map((item) => (
+                  {navigation.links.map((item, i) => (
                     <Disclosure.Button
-                      key={item.name}
+                      key={item.i}
                       as="a"
                       href={item.href}
                       className={classNames(

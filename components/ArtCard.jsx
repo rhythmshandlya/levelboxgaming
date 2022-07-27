@@ -1,11 +1,12 @@
-import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 // import React from 'react'
 const LatestNewsCard = (props) => {
+  const { t } = useTranslation();
   return (
-    <div className="w-fit rounded-xl w-[300px] md:w-[400px] mx-auto p-3">
+    <div className="w-fit rounded-xl w-[300px] md:w-[360px] mx-auto p-3">
       <img
-        class="w-full rounded-[30px]"
+        className="w-full rounded-[30px]"
         src={props.image}
         alt="Sunset in the mountains"
       />

@@ -1,11 +1,12 @@
-import { t } from "i18next";
 import React from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import { useTranslation } from "react-i18next";
 import useData from "./hooks/useData";
 import InstallOn from "./Icons/InstallOn";
 
 export default function Benefits() {
   const { download, bannerSoon } = useData();
+  const { t } = useTranslation();
   return (
     <>
       <div className="flex flex-wrap justify-start lg:flex-nowrap">

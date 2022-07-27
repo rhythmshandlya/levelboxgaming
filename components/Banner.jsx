@@ -1,8 +1,9 @@
-import { t } from "i18next";
 import React from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import { useTranslation } from "react-i18next";
 
 const Banner = ({ data }) => {
+  const { t } = useTranslation();
   console.log(data.image);
   const style = {
     backgroundImage: `url('${data.image}')`,

@@ -9,9 +9,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import useData from "./hooks/useData";
 import { useTheme } from "next-themes";
-import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 export function SimpleSlider() {
+  const { t } = useTranslation();
   const { art } = useData();
   const { theme } = useTheme();
   const slider = React.useRef(null);
@@ -66,7 +67,7 @@ export function SimpleSlider() {
         <Slider ref={slider} {...settings}>
           {art.map((news, i) => {
             return (
-              <div className="md:mb-5 md:mt-20 mt-16">
+              <div key={i} className="md:mb-5 md:mt-20 mt-16">
                 <ArtCard image={news.image} title={news.title} />
               </div>
             );
