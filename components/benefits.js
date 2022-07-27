@@ -1,42 +1,11 @@
-import Image from "next/image";
+import { t } from "i18next";
 import React from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import useData from "./hooks/useData";
+import InstallOn from "./Icons/InstallOn";
 
-const InstallOn = ({ download }) => {
-  return (
-    <div className="flex flex-wrap justify-center my-2">
-      <a
-        href={download.playStore.link}
-        target="_blank"
-        rel="noopener"
-        className="relative block w-40"
-      >
-        <Image
-          src={download.playStore.image}
-          layout="responsive"
-          alt="Android"
-          width="70"
-          height="21"
-        />
-      </a>
-      <a
-        href={download.appStore.link}
-        target="_blank"
-        rel="noopener"
-        className="relative block w-40"
-      >
-        <Image
-          src={download.appStore.image}
-          layout="responsive"
-          alt="Android"
-          width="70"
-          height="21"
-        />
-      </a>
-    </div>
-  );
-};
-export default function Benefits({ data, download }) {
+export default function Benefits() {
+  const { download, bannerSoon } = useData();
   return (
     <>
       <div className="flex flex-wrap justify-start lg:flex-nowrap">
@@ -48,7 +17,7 @@ export default function Benefits({ data, download }) {
           >
             <div>
               <img
-                src={data.image}
+                src={bannerSoon.image}
                 width="521px"
                 height="482px"
                 alt="Benefits"
@@ -60,11 +29,11 @@ export default function Benefits({ data, download }) {
         <div className={`flex flex-wrap`}>
           <div className="flex flex-col items-start lg:mt-32 mx-5 my-12 lg:mx-0">
             <h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
-              {data.title}
+              {t(bannerSoon.title)}
             </h3>
 
             <p className="max-w-lg py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">
-              {data.desc}
+              {t(bannerSoon.description)}
             </p>
             <InstallOn download={download} />
           </div>

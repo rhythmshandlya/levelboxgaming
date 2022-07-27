@@ -12,7 +12,7 @@ function classNames(...classes) {
 
 export default function Navbar() {
   const { navigation, social } = useData();
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div id="top">
@@ -104,7 +104,7 @@ export default function Navbar() {
                       )}
                       aria-current={item.current ? "page" : undefined}
                     >
-                      {item.name}
+                      {t(item.name)}
                     </Disclosure.Button>
                   ))}
                 </div>

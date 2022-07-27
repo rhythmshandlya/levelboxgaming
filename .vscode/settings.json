@@ -3,6 +3,7 @@
         "fontawesome",
         "fortawesome",
         "headlessui",
-        "heroicons"
+        "heroicons",
+        "pekka"
     ]
 }

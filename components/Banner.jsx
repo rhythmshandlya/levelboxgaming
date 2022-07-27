@@ -1,3 +1,4 @@
+import { t } from "i18next";
 import React from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
@@ -21,10 +22,10 @@ const Banner = ({ data }) => {
             }`}
           >
             <h2 className="text-white font-bold lg:leading-tight lg:text-4xl text-3xl dark:text-white">
-              {data.title}
+              {t(data.title)}
             </h2>
-            <p className="text-sm lg:text-xl">{data.description}</p>
-            <a className="learn-more mt-8">Learn More</a>
+            <p className="text-sm lg:text-xl">{t(data.description)}</p>
+            <a className="learn-more mt-8">{t("learn_more")}</a>
           </div>
         </AnimationOnScroll>
       </div>

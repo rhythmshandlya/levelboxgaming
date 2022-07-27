@@ -150,8 +150,4 @@ body{
     .slick-center .text-low{
         padding-top: 60px;
     }
-    
-    .slick-active .text-low{
-        transition: all .3s ease-in-out;
-    } 
 }
