@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 const LatestNewsCard = (props) => {
   const { t } = useTranslation();
   return (
-    <div className="w-fit rounded-xl w-[300px] md:w-[360px] mx-auto p-3">
+    <div className="w-fit rounded-xl w-[240px] md:w-[360px] mx-auto p-3">
       <img
         className="w-full rounded-[30px]"
         src={props.image}

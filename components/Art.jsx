@@ -10,6 +10,7 @@ import {
 import useData from "./hooks/useData";
 import { useTheme } from "next-themes";
 import { useTranslation } from "react-i18next";
+import { ArrowsLeft, ArrowsRight } from "./Icons/Arrows";
 
 export function SimpleSlider() {
   const { t } = useTranslation();
@@ -63,37 +64,35 @@ export function SimpleSlider() {
   return (
     <div className="flex flex-col align-middle text-center md:mt-36 my-10">
       <h1 className="text-3xl font-semibold">{t("concept_art")}</h1>
-      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce="true">
-        <Slider ref={slider} {...settings}>
-          {art.map((news, i) => {
-            return (
-              <div key={i} className="md:mb-5 md:mt-20 mt-16">
-                <ArtCard image={news.image} title={news.title} />
-              </div>
-            );
-          })}
-        </Slider>
-        <div className="flex justify-center">
-          <button
-            className="p-3 "
-            style={{ outline: "none" }}
-            onClick={() => slider?.current?.slickPrev()}
-          >
-            <FontAwesomeIcon icon={faCircleArrowLeft} size="2x" color="white" />
-          </button>
-          <button
-            style={{ outline: "none" }}
-            className="p-3 focus:outline-0 outline-inherit"
-            onClick={() => slider?.current?.slickNext()}
-          >
-            <FontAwesomeIcon
-              icon={faCircleArrowRight}
-              size="2x"
-              color="white"
-            />
-          </button>
-        </div>
-      </AnimationOnScroll>
+      <div className="lg:h-[450px]">
+        <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce="true">
+          <Slider ref={slider} {...settings}>
+            {art.map((news, i) => {
+              return (
+                <div key={i} className="md:mb-5 md:mt-20 mt-16">
+                  <ArtCard image={news.image} title={news.title} />
+                </div>
+              );
+            })}
+          </Slider>
+        </AnimationOnScroll>
+      </div>
+      <div className="flex justify-center">
+        <button
+          className="p-3 "
+          style={{ outline: "none" }}
+          onClick={() => slider?.current?.slickPrev()}
+        >
+          <ArrowsLeft />
+        </button>
+        <button
+          style={{ outline: "none" }}
+          className="p-3 focus:outline-0 outline-inherit"
+          onClick={() => slider?.current?.slickNext()}
+        >
+          <ArrowsRight />
+        </button>
+      </div>
     </div>
   );
 }
