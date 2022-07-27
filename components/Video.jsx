@@ -4,7 +4,7 @@ import useData from "./hooks/useData";
 export default function Video() {
   const { video } = useData();
   return (
-    <div className="container p-8 mx-auto xl:px-0">
+    <div className="container p-8 mx-auto xl:px-0" id="video">
       <AnimationOnScroll
         animateIn="animate__fadeIn"
         animateOnce="true"

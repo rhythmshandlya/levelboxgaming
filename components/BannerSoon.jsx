@@ -9,7 +9,10 @@ export default function Benefits() {
   const { t } = useTranslation();
   return (
     <>
-      <div className="flex flex-wrap justify-start lg:flex-nowrap">
+      <div
+        className="flex flex-wrap justify-start lg:flex-nowrap"
+        id="bannerSoon"
+      >
         <div className={`flex items-start justify-start w-full lg:w-1/2`}>
           <AnimationOnScroll
             animateIn="animate__fadeInLeft"

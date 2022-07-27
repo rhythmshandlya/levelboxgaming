@@ -10,7 +10,7 @@ const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="flex flex-col m-4 lg:m-20 flex-wrap">
+    <div className="flex flex-col m-4 lg:m-20 flex-wrap" id="footer">
       <div className="mx-auto">
         <Link href="/">
           <img src={footer.image} alt="LevelBoxGames" />

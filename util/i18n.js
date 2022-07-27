@@ -8,12 +8,21 @@ i18next
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    supportedLngs: ["en", "ar", "fr"],
+    supportedLngs: ["en", "fr"],
     fallbackLng: "en",
     debug: false,
     detection: {
-      order: ["cookie", "path", "htmlTag"],
-      caches: ["cookie"],
+      order: [
+        "querystring",
+        "cookie",
+        "localStorage",
+        "sessionStorage",
+        "navigator",
+        "htmlTag",
+        "path",
+        "subdomain",
+      ],
+      caches: ["localStorage", "cookie"],
     },
     saveMissing: true,
     interpolation: {

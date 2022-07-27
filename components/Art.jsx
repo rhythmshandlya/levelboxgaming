@@ -62,10 +62,13 @@ export function SimpleSlider() {
   };
 
   return (
-    <div className="flex flex-col align-middle text-center md:mt-36 my-10">
+    <div
+      className="flex flex-col align-middle text-center md:mt-36 my-10"
+      id="conceptArt"
+    >
       <h1 className="text-3xl font-semibold">{t("concept_art")}</h1>
-      <div className="lg:h-[450px]">
-        <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce="true">
+      <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce="true">
+        <div className="lg:h-[450px]">
           <Slider ref={slider} {...settings}>
             {art.map((news, i) => {
               return (
@@ -75,24 +78,24 @@ export function SimpleSlider() {
               );
             })}
           </Slider>
-        </AnimationOnScroll>
-      </div>
-      <div className="flex justify-center">
-        <button
-          className="p-3 "
-          style={{ outline: "none" }}
-          onClick={() => slider?.current?.slickPrev()}
-        >
-          <ArrowsLeft />
-        </button>
-        <button
-          style={{ outline: "none" }}
-          className="p-3 focus:outline-0 outline-inherit"
-          onClick={() => slider?.current?.slickNext()}
-        >
-          <ArrowsRight />
-        </button>
-      </div>
+        </div>
+        <div className="flex justify-center">
+          <button
+            className="p-3 "
+            style={{ outline: "none" }}
+            onClick={() => slider?.current?.slickPrev()}
+          >
+            <ArrowsLeft />
+          </button>
+          <button
+            style={{ outline: "none" }}
+            className="p-3 focus:outline-0 outline-inherit"
+            onClick={() => slider?.current?.slickNext()}
+          >
+            <ArrowsRight />
+          </button>
+        </div>
+      </AnimationOnScroll>
     </div>
   );
 }

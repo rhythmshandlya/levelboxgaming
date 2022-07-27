@@ -17,7 +17,7 @@
         "links":[
             { "name": "stack", "href": "#", "current": false },
             { "name": "news", "href": "#", "current": false },
-            { "name": "about", "href": "#", "current": false },
+            { "name": "about", "href": "#banners", "current": false },
             { "name": "carrier", "href": "#", "current": false },
             { "name": "support", "href": "#", "current": false }
         ]

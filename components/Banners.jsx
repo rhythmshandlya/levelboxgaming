@@ -5,7 +5,7 @@ import useData from "./hooks/useData";
 const Banners = () => {
   const { banners } = useData();
   return (
-    <div className="mt-10 mb-10">
+    <div className="mt-10 mb-10" id="banners">
       {banners?.map((banner, i) => {
         return <Banner data={banner} key={i} />;
       })}

@@ -8,7 +8,7 @@ const ConceptArt = ({ data }) => {
 
   const { news } = useData();
   return (
-    <div className="md:my-36 my-20">
+    <div className="md:my-36 my-20" id="latestNews">
       <div className="md:my-16">
         <h1 className="text-center font-semibold text-3xl">
           {t("news_and_press")}
