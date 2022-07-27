@@ -11,7 +11,7 @@
         }
     },
     "navigation": {
-        "fixed": true,
+        "fixed": false,
         "logoComputer": "/img/logo-dark.png",
         "logoMobile": "/img/logo-dark.png",
         "links":[

@@ -1,7 +1,7 @@
 export const Twitter = ({ size = 22 }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className="h-6 w-6 hover:text-white"
+    className="h-6 w-6 hover:text-[#ee9ca7] dark:hover:text-white"
     width={size}
     height={size}
     viewBox="0 0 24 24"
@@ -14,7 +14,7 @@ export const Twitter = ({ size = 22 }) => (
 export const Facebook = ({ size = 22 }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className="h-6 w-6 hover:text-white"
+    className="h-6 w-6 hover:text-[#ee9ca7] dark:hover:text-white"
     width={size}
     height={size}
     viewBox="0 0 24 24"
@@ -26,7 +26,7 @@ export const Facebook = ({ size = 22 }) => (
 export const Instagram = ({ size = 22 }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className="h-6 w-6 hover:text-white"
+    className="h-6 w-6 hover:text-[#ee9ca7] dark:hover:text-white"
     width={size}
     height={size}
     viewBox="0 0 24 24"
@@ -39,7 +39,7 @@ export const Instagram = ({ size = 22 }) => (
 export const Linkedin = ({ size = 24 }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className="h-6 w-6 dark:hover:text-white hover:text-black"
+    className="h-6 w-6 hover:text-[#ee9ca7] dark:hover:text-white"
     width={size}
     height={size}
     viewBox="0 0 24 24"

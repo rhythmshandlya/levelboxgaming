@@ -19,12 +19,12 @@ export function SimpleSlider() {
   const slider = React.useRef(null);
 
   var settings = {
-    dots: theme == "dark" ? false : true,
+    dots: false,
     infinite: true,
     speed: 400,
     slidesToShow: 3,
     slidesToScroll: 1,
-    rows: theme == "dark" ? 1 : 2,
+    rows: 1,
     pauseOnDotsHover: true,
     centerMode: true,
     prevArrow: <></>,
