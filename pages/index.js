@@ -20,16 +20,14 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
-      <Navbar />
+    <>
       <Hero />
       <Video />
       <BannerSoon />
       <ConceptArt />
       <LatestNews />
       <Banners />
-      <Footer />
       <PopupWidget />
-    </div>
+    </>
   );
 }

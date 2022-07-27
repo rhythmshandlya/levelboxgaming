@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "animate.css/animate.min.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import "../util/i18n";
+import Layout from "../components/Layout";
 
 config.autoAddCss = false;
 
@@ -16,7 +17,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <AppProvider>
       <ThemeProvider attribute="class">
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </ThemeProvider>
     </AppProvider>
   );

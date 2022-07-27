@@ -5,7 +5,7 @@ export const ArrowsRight = () => {
     <svg
       stroke="currentColor"
       fill="currentColor"
-      stroke-width="0"
+      strokeWidth="0"
       viewBox="0 0 1024 1024"
       className="hover:bg-white rounded-full transition-all hover:text-black hover:scale-110 duration-150"
       height="45px"
@@ -22,7 +22,7 @@ export const ArrowsLeft = () => {
     <svg
       stroke="currentColor"
       fill="currentColor"
-      stroke-width="0"
+      strokeWidth="0"
       viewBox="0 0 1024 1024"
       className="hover:bg-white rounded-full hover:text-black hover:scale-110 transition-all duration-150"
       height="45px"
