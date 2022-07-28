@@ -68,7 +68,7 @@ export function SimpleSlider() {
     >
       <h1 className="text-3xl font-semibold">{t("concept_art")}</h1>
       <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce="true">
-        <div className="lg:h-[450px]">
+        <div className="lg:h-[450px] h-[300px]">
           <Slider ref={slider} {...settings}>
             {art.map((news, i) => {
               return (
