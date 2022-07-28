@@ -1,12 +1,11 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import useData from "./hooks/useData";
+import useNews from "./hooks/useNews";
 import NewsCard from "./NewsCard";
 
 const ConceptArt = ({ data }) => {
   const { t } = useTranslation();
-
-  const { news } = useData();
+  const news = useNews();
   return (
     <div className="md:my-36 my-20" id="latestNews">
       <div className="md:my-16">
@@ -21,10 +20,11 @@ const ConceptArt = ({ data }) => {
             return (
               <div key={i} className="md:m-10 m-4">
                 <NewsCard
-                  imageSrc={news.image}
-                  title={news.title}
-                  date={news.date}
-                  summary={news.description}
+                  imageSrc={news.card.image}
+                  title={news.card.title}
+                  date={news.card.date}
+                  summary={news.card.description}
+                  id={i}
                 />
               </div>
             );

@@ -1,5 +1,6 @@
 import { ThemeProvider } from "next-themes";
 import { AppProvider } from "../context/appContext";
+import { NewsProvider } from "../context/newsContext";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "../css/tailwind.css";
 import "../css/global.css";
@@ -17,9 +18,11 @@ function MyApp({ Component, pageProps }) {
   return (
     <AppProvider>
       <ThemeProvider attribute="class">
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <NewsProvider>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </NewsProvider>
       </ThemeProvider>
     </AppProvider>
   );

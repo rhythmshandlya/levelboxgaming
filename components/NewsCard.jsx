@@ -24,7 +24,10 @@ const ConceptArtCard = (props) => {
           </p>
         </div>
         <div className="px-8 pb-2">
-          <a className="inline-block0 px-3 text-base mr-2 mb-2 cursor-pointer">
+          <a
+            href={`/news/${props.id}`}
+            className="inline-block0 px-3 text-base mr-2 mb-2 cursor-pointer"
+          >
             {t("read_more")}
           </a>
         </div>

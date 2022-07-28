@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import allNews from "../../json/news.json";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function isImage(str) {
   return str.startsWith("__IMG__");
 }
-function isGroup(str) {
-  return str.startsWith("__GRP__");
+function isVideo(str) {
+  return str.startsWith("__VDO__");
 }
+
 const BlogPage = () => {
   const [mounted, setMounted] = useState(false);
   const router = useRouter();
@@ -49,18 +49,37 @@ const BlogPage = () => {
         </div>
         <h1 className="text-center text-3xl lg:m-20 my-10">{news?.title}</h1>
         {news?.para?.map((element, index) => {
-          if (isGroup(element)) {
+          if (isVideo(element)) {
+            const link = element.substring(7);
+            console.log(link);
+            return (
+              <div className="container p-6 mx-auto xl:px-0" id="video">
+                <div className="w-full max-w-4xl mx-auto overflow-hidden lg:mb-20 lg:mt-20 my-4 rounded-2xl ">
+                  <div className="relative bg-indigo-300 cursor-pointer aspect-w-16 aspect-h-9 ">
+                    <iframe
+                      src={link}
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            );
+          }
+          if (isImage(element)) {
             const s = element.substring(7);
             const arr = s.split("|");
             return (
-              <div className="flex scroll-x-auto overflow-scroll hide-scrollbar m-5 md:m-0">
+              <div className="flex flex-wrap justify-center m-5 md:m-0">
                 {arr.length == 3 &&
                   arr.map((image) => {
                     return (
                       <div className="m-2">
                         <img
                           src={image}
-                          className="rounded-xl mx-auto my-10 lg:w-[400px] w-[full]"
+                          className="rounded-xl mx-auto my-5 md:my-10 lg:w-[350px] w-[full]"
                         ></img>
                       </div>
                     );
@@ -71,7 +90,7 @@ const BlogPage = () => {
                       <div className="m-2">
                         <img
                           src={image}
-                          className="rounded-xl mx-auto my-10 lg:w-[600px] w-[full]"
+                          className="rounded-xl mx-auto my-5 md:my-10  lg:w-[500px] w-[full]"
                         ></img>
                       </div>
                     );
@@ -90,7 +109,7 @@ const BlogPage = () => {
                     return (
                       <img
                         src={image}
-                        className="rounded-xl mx-auto my-5 lg:w-[300px] w-[full]"
+                        className="rounded-xl mx-auto my-5 md:my-10  md:w-[340px] lg:w-[460px] w-[full]"
                       ></img>
                     );
                   })}
