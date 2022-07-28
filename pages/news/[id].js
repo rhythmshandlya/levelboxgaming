@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import useNews from "../../hooks/useNews";
+import { useTranslation } from "react-i18next";
 
 function isImage(str) {
   return str.startsWith("__IMG__");
@@ -13,6 +14,7 @@ function isList(str) {
 }
 
 const BlogPage = () => {
+  const { t } = useTranslation();
   const allData = useNews();
   const router = useRouter();
   const { id } = router.query;
@@ -22,7 +24,7 @@ const BlogPage = () => {
     return (
       <>
         <div className="text-center lg:m-40">
-          <h1 className="text-3xl lg:m-20 my-10">Page Not Found(404)</h1>
+          <h1 className="text-3xl lg:m-20 my-10">{t("not_found")}</h1>
         </div>
       </>
     );
@@ -38,18 +40,17 @@ const BlogPage = () => {
           <div className="flex justify-between cursor-pointer">
             <a className="flex hover:text-[#DC143C] align-middle">
               <span className="mx-3"> &lt;</span>
-              <span className="">{data?.backText}</span>
+              <span className="">{t(data?.backText)}</span>
             </a>
             <a href={data?.alertLink} className="text-[#DC143C]">
-              {data?.alertText}
+              {t(data?.alertText)}
             </a>
           </div>
         )}
-        <h1 className="text-center text-3xl lg:m-20 my-10">{data?.title}</h1>
+        <h1 className="text-center text-3xl lg:m-20 my-10">{t(data?.title)}</h1>
         {data?.para?.map((element, index) => {
           if (isVideo(element)) {
             const link = element.substring(7);
-            console.log(link);
             return (
               <div className="container p-6 mx-auto xl:px-0" id="video">
                 <div className="w-full max-w-4xl mx-auto overflow-hidden lg:mb-20 lg:mt-20 my-4 rounded-2xl ">
@@ -129,7 +130,7 @@ const BlogPage = () => {
                   })}
               </div>
             );
-          } else return <p className="m-3">{element}</p>;
+          } else return <p className="m-3">{t(element)}</p>;
         })}
       </div>
     </>
