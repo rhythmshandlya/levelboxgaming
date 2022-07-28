@@ -3,7 +3,7 @@ import { Disclosure } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Twitter, Instagram, Facebook } from "./Icons/Social";
 
-import useData from "./hooks/useData";
+import useData from "../hooks/useData";
 import { useTranslation } from "react-i18next";
 
 function classNames(...classes) {
@@ -38,16 +38,20 @@ export default function Navbar() {
                 </div>
                 <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                   <div className="flex-shrink-0 flex items-center">
-                    <img
-                      className="block lg:hidden h-16 w-auto mx-auto ml-12"
-                      src={navigation.logoMobile}
-                      alt="LevelBoxGames"
-                    />
-                    <img
-                      className="hidden lg:block h-16 w-auto"
-                      src={navigation.logoComputer}
-                      alt="LevelBoxGames"
-                    />
+                    <a href="/">
+                      <img
+                        className="block lg:hidden h-16 w-auto mx-auto ml-12"
+                        src={navigation.logoMobile}
+                        alt="LevelBoxGames"
+                      />
+                    </a>
+                    <a href="/">
+                      <img
+                        className="hidden lg:block h-16 w-auto"
+                        src={navigation.logoComputer}
+                        alt="LevelBoxGames"
+                      />
+                    </a>
                   </div>
                   <div className="hidden sm:block sm:ml-8">
                     <div className="flex mt-3 space-x-3">

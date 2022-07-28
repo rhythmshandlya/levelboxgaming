@@ -1,0 +1,22 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+self["webpackHotUpdate_N_E"]("pages/[page]",{
+
+/***/ "./json/others.json":
+/*!**************************!*\
+  !*** ./json/others.json ***!
+  \**************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+module.exports = JSON.parse('{"terms":{"allowHeader":true,"goBackLink":"/","backText":"Home","alertText":"See Latest News","alertLink":"/","heroImage":false,"heroImageLink":"/img/news_1.png","title":"Terms And Services","para":["It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."," Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like.","The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.","This is a list:","__LIS__The standard chunk of Lorem Ipsum used since|The standard chunk of Lorem Ipsum used since|The standard chunk of Lorem Ipsum used since|The standard chunk of Lorem Ipsum used since"]},"about":{"allowHeader":true,"goBackLink":"/","backText":"Home","alertText":"See Latest News","alertLink":"/","heroImage":false,"heroImageLink":"/img/news_1.png","title":"About Page","para":["It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."," Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like.","The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.","This is a list:","__LIS__The standard chunk of Lorem Ipsum used since|The standard chunk of Lorem Ipsum used since|The standard chunk of Lorem Ipsum used since|The standard chunk of Lorem Ipsum used since"]}}');
+
+/***/ })
+
+});

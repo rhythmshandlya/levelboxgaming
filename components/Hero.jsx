@@ -1,5 +1,5 @@
 import { AnimationOnScroll } from "react-animation-on-scroll";
-import useData from "./hooks/useData";
+import useData from "../hooks/useData";
 import { useTranslation } from "react-i18next";
 
 export default function Hero() {

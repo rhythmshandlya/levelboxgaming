@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "./Banner";
-import useData from "./hooks/useData";
+import useData from "../hooks/useData";
 
 const Banners = () => {
   const { banners } = useData();

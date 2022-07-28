@@ -3,10 +3,8 @@ import { useEffect } from "react";
 
 import data from "../json/data.json";
 import Hero from "../components/Hero";
-import Navbar from "../components/Navbar";
 import Video from "../components/Video";
 import BannerSoon from "../components/BannerSoon";
-import Footer from "../components/Footer";
 import PopupWidget from "../components/PopupWidget";
 import LatestNews from "../components/News";
 import ConceptArt from "../components/Art";

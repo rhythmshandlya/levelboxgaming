@@ -59,38 +59,6 @@
           "image":"https://levelboxgames.com/static/media/concept-art-3.242185ba1f72df02ca5a.webp"
         }
     ],
-    "news": [
-      {
-          "title":"Skeleton King Skin",
-          "description":"Our dream is to create games that as many people as possible play for many years and that remembered.",
-          "image":"/img/nt2.png",
-          "date":"6.09.2022"
-      },
-      {
-          "title":"Angry Birds Journey",
-          "description": "Our dream is to create games that as many people as possible play for many years and that remembered.",
-          "image": "/img/nt3.png",
-          "date":"8.10.2022"
-      },
-      {
-        "title":"P.E.K.K.A King Update",
-        "description": "Our dream is to create games that as many people as possible play for many years and that remembered.",
-        "image": "/img/nt1.png",
-        "date": "7.09.2022"
-        },
-        {
-        "title":"Skeleton King Skin",
-        "description":"Our dream is to create games that as many people as possible play for many years and that remembered.",
-        "image":"/img/nt2.png",
-        "date":"6.09.2022"
-        },
-        {
-        "title":"Angry Birds Journey",
-        "description": "Our dream is to create games that as many people as possible play for many years and that remembered.",
-        "image": "/img/nt3.png",
-        "date":"8.10.2022"
-        }
-    ],
     "banners": [
         {
             "align": "left",

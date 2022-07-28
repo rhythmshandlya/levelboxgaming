@@ -2,12 +2,7 @@ import React, { useState } from "react";
 import ArtCard from "./ArtCard";
 import Slider from "react-slick";
 import { AnimationOnScroll } from "react-animation-on-scroll";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCircleArrowLeft,
-  faCircleArrowRight,
-} from "@fortawesome/free-solid-svg-icons";
-import useData from "./hooks/useData";
+import useData from "../hooks/useData";
 import { useTheme } from "next-themes";
 import { useTranslation } from "react-i18next";
 import { ArrowsLeft, ArrowsRight } from "./Icons/Arrows";

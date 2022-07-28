@@ -1,7 +1,7 @@
 import React from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import { useTranslation } from "react-i18next";
-import useData from "./hooks/useData";
+import useData from "../hooks/useData";
 import InstallOn from "./Icons/InstallOn";
 
 export default function Benefits() {

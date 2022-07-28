@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import useData from "./hooks/useData";
+import useData from "../hooks/useData";
 import Social from "./Icons/Social";
 import InstallOn from "./Icons/InstallOn";
 import { useTranslation } from "react-i18next";

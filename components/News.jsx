@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import useNews from "./hooks/useNews";
+import useNews from "../hooks/useNews";
 import NewsCard from "./NewsCard";
 
 const ConceptArt = ({ data }) => {
@@ -12,10 +12,7 @@ const ConceptArt = ({ data }) => {
         <h1 className="text-center font-semibold text-3xl">
           {t("news_and_press")}
         </h1>
-        <div
-          className="overflow-x-scroll flex md:mx-10 my-10 mx-5"
-          id="style-2"
-        >
+        <div className="overflow-x-auto flex md:mx-10 my-10 mx-5" id="style-2">
           {news.map((news, i) => {
             return (
               <div key={i} className="md:m-10 m-4">

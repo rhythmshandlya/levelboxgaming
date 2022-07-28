@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import allNews from "../../json/news.json";
+import useNews from "../../hooks/useNews";
 
 function isImage(str) {
   return str.startsWith("__IMG__");
@@ -8,47 +8,45 @@ function isImage(str) {
 function isVideo(str) {
   return str.startsWith("__VDO__");
 }
+function isList(str) {
+  return str.startsWith("__LIS__");
+}
 
 const BlogPage = () => {
-  const [mounted, setMounted] = useState(false);
+  const allData = useNews();
   const router = useRouter();
   const { id } = router.query;
-  const news = allNews[id];
+  const data = allData[id];
 
-  if (id >= news?.length)
+  if (!data)
     return (
       <>
-        <div className="lg:mx-[200px] lg:my-[100px] mx-[5px] my-[10px]">
-          <div className="flex justify-between cursor-pointer">
-            <a className="flex hover:text-[#DC143C] align-middle">
-              <span className="mx-3"> &lt;</span>
-              <span className="">More News</span>
-            </a>
-            <p className="text-[#DC143C]">Level Up! June 23rd 2022</p>
-          </div>
+        <div className="text-center lg:m-40">
+          <h1 className="text-3xl lg:m-20 my-10">Page Not Found(404)</h1>
         </div>
       </>
     );
-
-  useEffect(() => setMounted(true), []);
-  if (!mounted) return null;
 
   return (
     <>
       <img
         className="w-full h-[500px] object-cover"
-        src={news?.heroImage}
+        src={data?.heroImage}
       ></img>
       <div className="lg:mx-[200px] lg:my-[100px] mx-[5px] my-[10px]">
-        <div className="flex justify-between cursor-pointer">
-          <a className="flex hover:text-[#DC143C] align-middle">
-            <span className="mx-3"> &lt;</span>
-            <span className="">More News</span>
-          </a>
-          <p className="text-[#DC143C]">Level Up! June 23rd 2022</p>
-        </div>
-        <h1 className="text-center text-3xl lg:m-20 my-10">{news?.title}</h1>
-        {news?.para?.map((element, index) => {
+        {data?.allowHeader && (
+          <div className="flex justify-between cursor-pointer">
+            <a className="flex hover:text-[#DC143C] align-middle">
+              <span className="mx-3"> &lt;</span>
+              <span className="">{data?.backText}</span>
+            </a>
+            <a href={data?.alertLink} className="text-[#DC143C]">
+              {data?.alertText}
+            </a>
+          </div>
+        )}
+        <h1 className="text-center text-3xl lg:m-20 my-10">{data?.title}</h1>
+        {data?.para?.map((element, index) => {
           if (isVideo(element)) {
             const link = element.substring(7);
             console.log(link);
@@ -66,6 +64,22 @@ const BlogPage = () => {
                   </div>
                 </div>
               </div>
+            );
+          }
+          if (isList(element)) {
+            const s = element.substring(7);
+            const arr = s.split("|");
+            return (
+              <ol className="pl-10">
+                {arr.map((listItem, i) => {
+                  return (
+                    <li>
+                      <span>{i + 1}. </span>
+                      {listItem}
+                    </li>
+                  );
+                })}
+              </ol>
             );
           }
           if (isImage(element)) {

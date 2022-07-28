@@ -11,6 +11,7 @@ import "animate.css/animate.min.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import "../util/i18n";
 import Layout from "../components/Layout";
+import { OtherProvider } from "../context/otherContext";
 
 config.autoAddCss = false;
 
@@ -19,9 +20,11 @@ function MyApp({ Component, pageProps }) {
     <AppProvider>
       <ThemeProvider attribute="class">
         <NewsProvider>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
+          <OtherProvider>
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </OtherProvider>
         </NewsProvider>
       </ThemeProvider>
     </AppProvider>
