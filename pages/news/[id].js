@@ -76,7 +76,7 @@ const BlogPage = () => {
                   return (
                     <li>
                       <span>{i + 1}. </span>
-                      {listItem}
+                      {t(listItem)}
                     </li>
                   );
                 })}

@@ -1,6 +1,7 @@
 import React from "react";
 import useOther from "../hooks/useOthers";
 import { useRouter } from "next/router";
+import { useTranslation } from "react-i18next";
 
 function isImage(str) {
   return str.startsWith("__IMG__");
@@ -13,6 +14,7 @@ function isList(str) {
 }
 
 const OtherPage = () => {
+  const { t } = useTranslation();
   const allData = useOther();
   const router = useRouter();
   const { page } = router.query;
@@ -22,7 +24,7 @@ const OtherPage = () => {
     return (
       <>
         <div className="text-center lg:m-40">
-          <h1 className="text-3xl lg:m-20 my-10">Page Not Found(404)</h1>
+          <h1 className="text-3xl lg:m-20 my-10">{t("not_found")}</h1>
         </div>
       </>
     );
@@ -40,14 +42,14 @@ const OtherPage = () => {
           <div className="flex justify-between cursor-pointer">
             <a className="flex hover:text-[#DC143C] align-middle">
               <span className="mx-3"> &lt;</span>
-              <span className="">{data?.backText}</span>
+              <span className="">{t(data?.backText)}</span>
             </a>
             <a href={data?.alertLink} className="text-[#DC143C]">
-              {data?.alertText}
+              {t(data?.alertText)}
             </a>
           </div>
         )}
-        <h1 className="text-center text-3xl lg:m-20 my-10">{data?.title}</h1>
+        <h1 className="text-center text-3xl lg:m-20 my-10">{t(data?.title)}</h1>
         {data?.para?.map((element, index) => {
           if (isVideo(element)) {
             const link = element.substring(7);
@@ -77,7 +79,7 @@ const OtherPage = () => {
                   return (
                     <li>
                       <span>{i + 1}. </span>
-                      {listItem}
+                      {t(listItem)}
                     </li>
                   );
                 })}
@@ -131,7 +133,7 @@ const OtherPage = () => {
                   })}
               </div>
             );
-          } else return <p className="m-3">{element}</p>;
+          } else return <p className="m-3">{t(element)}</p>;
         })}
       </div>
     </>
