@@ -26,7 +26,9 @@ const Banner = ({ data }) => {
               {t(data.title)}
             </h2>
             <p className="text-sm lg:text-xl">{t(data.description)}</p>
-            <a className="learn-more mt-8">{t("learn_more")}</a>
+            <a href={data.buttonLink} className="learn-more mt-8">
+              {t(data.buttonText)}
+            </a>
           </div>
         </AnimationOnScroll>
       </div>

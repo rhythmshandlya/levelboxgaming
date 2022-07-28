@@ -1,5 +1,6 @@
 {
     "mode": "dark",
+    "reachUs": false,
     "download": {
         "playStore": {
             "link": "https://www.google.com/",
@@ -66,7 +67,7 @@
             "image":"https://cdn.discordapp.com/attachments/773392711713685505/998423115942088765/coc.png",
             "description": "Our dream is to create games that as many people as possible play for many years and that remembered forever.Our dream is to create games that as many people as possible play for many years.",
             "buttonText": "Learn More",
-            "buttonLink": "#"
+            "buttonLink": "/news/0"
         },
         {
             "align": "right",

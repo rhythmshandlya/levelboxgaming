@@ -9,9 +9,11 @@ import PopupWidget from "../components/PopupWidget";
 import LatestNews from "../components/News";
 import ConceptArt from "../components/Art";
 import Banners from "../components/Banners";
+import useData from "../hooks/useData";
 
 export default function Home() {
   const { setTheme } = useTheme();
+  const { reachUs } = useData();
 
   useEffect(() => {
     setTheme(data.mode);
@@ -25,7 +27,7 @@ export default function Home() {
       <ConceptArt />
       <LatestNews />
       <Banners />
-      <PopupWidget />
+      {reachUs && <PopupWidget />}
     </>
   );
 }

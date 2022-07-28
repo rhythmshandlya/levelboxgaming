@@ -74,7 +74,7 @@ export function SimpleSlider() {
             })}
           </Slider>
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center p-6 md:p-40 lg:p-6">
           <button
             className="p-3 "
             style={{ outline: "none" }}
@@ -84,7 +84,7 @@ export function SimpleSlider() {
           </button>
           <button
             style={{ outline: "none" }}
-            className="p-3 focus:outline-0 outline-inherit"
+            className="p-3"
             onClick={() => slider?.current?.slickNext()}
           >
             <ArrowsRight />
