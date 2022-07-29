@@ -1,5 +1,5 @@
 {
-    "mode": "light",
+    "mode": "dark",
     "reachUs": true,
     "download": {
         "playStore": {
@@ -28,7 +28,7 @@
         "subheading": "hero_subheading",
         "preOrder": "https://www.udemy.com/",
         "explore": "https://www.udemy.com/",
-        "image":"/img/hero.jpg"
+        "image":"https://i.pinimg.com/originals/59/bf/96/59bf96fde108d05bbaa2f096de0934d5.gif"
     },
     "video":{
         "link":"https://www.youtube.com/embed/_CPrYB6Q-HM?controls=0"
