@@ -45,7 +45,7 @@ export function SimpleSlider() {
         },
       },
       {
-        breakpoint: 1200,
+        breakpoint: 1300,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
