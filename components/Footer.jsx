@@ -42,13 +42,13 @@ const Footer = () => {
           })}
         </div>
       </div>
-      <div className="text-center mt-4">
+      <div className="text-right mt-4">
         <p className="text-gray-500 dark:text-white">
           {t("designed_by")}
           <a href={footer.designedBy} className="text-gray-500 dark:text-white">
             Dtory
           </a>
-          <br /> {t(footer.copyright)}
+          <br className="md:hidden" /> {t(footer.copyright)}
         </p>
       </div>
     </div>
