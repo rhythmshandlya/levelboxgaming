@@ -5,10 +5,12 @@ import { AnimationOnScroll } from "react-animation-on-scroll";
 import useNews from "../hooks/useNews";
 import { useTheme } from "next-themes";
 import { useTranslation } from "react-i18next";
+import useData from "../hooks/useData";
 
 export function LightNews() {
   const { t } = useTranslation();
   const news = useNews();
+  const { newsArchive } = useData();
   const { theme } = useTheme();
   const slider = React.useRef(null);
 
@@ -57,6 +59,17 @@ export function LightNews() {
           </Slider>
         </div>
       </AnimationOnScroll>
+      <br />
+      <br />
+      <br />
+      <div className="text-center">
+        <a
+          href={newsArchive}
+          className="cursor-pointer w-40 mt-20 px-3.5 py-2 bg-red-500 text-white rounded-md"
+        >
+          {t("news_archives")}
+        </a>
+      </div>
     </div>
   );
 }
