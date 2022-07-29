@@ -7,12 +7,13 @@ import Video from "../components/Video";
 import BannerSoon from "../components/BannerSoon";
 import PopupWidget from "../components/PopupWidget";
 import LatestNews from "../components/News";
+import LightNews from "../components/LightNews";
 import ConceptArt from "../components/Art";
 import Banners from "../components/Banners";
 import useData from "../hooks/useData";
 
 export default function Home() {
-  const { setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
   const { reachUs } = useData();
 
   useEffect(() => {
@@ -25,7 +26,7 @@ export default function Home() {
       <Video />
       <BannerSoon />
       <ConceptArt />
-      <LatestNews />
+      {theme == "dark" ? <LatestNews /> : <LightNews />}
       <Banners />
       {reachUs && <PopupWidget />}
     </>

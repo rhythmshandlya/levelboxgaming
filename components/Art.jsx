@@ -60,6 +60,7 @@ export function SimpleSlider() {
     <div
       className="flex flex-col align-middle text-center md:mt-36 my-10"
       id="conceptArt"
+      style={{ display: theme == "dark" ? "" : "none" }}
     >
       <h1 className="text-3xl font-semibold">{t("concept_art")}</h1>
       <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce="true">

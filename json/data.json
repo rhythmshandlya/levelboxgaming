@@ -1,6 +1,6 @@
 {
-    "mode": "dark",
-    "reachUs": false,
+    "mode": "light",
+    "reachUs": true,
     "download": {
         "playStore": {
             "link": "https://www.google.com/",
@@ -16,7 +16,7 @@
         "logoComputer": "/img/logo-dark.png",
         "logoMobile": "/img/logo-dark.png",
         "links":[
-            { "name": "stack", "href": "#", "current": false },
+            { "name": "stack", "href": "#bannerSoon", "current": false },
             { "name": "news", "href": "#", "current": false },
             { "name": "about", "href": "#banners", "current": false },
             { "name": "carrier", "href": "#", "current": false },
@@ -102,7 +102,7 @@
             },
             {
                 "title": "Legal",
-                "link": "#"
+                "link": "/legal"
             },
             {
                 "title": "Safe and Fair Play",

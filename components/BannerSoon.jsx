@@ -10,7 +10,7 @@ export default function Benefits() {
   return (
     <>
       <div
-        className="flex flex-wrap justify-start lg:flex-nowrap"
+        className="flex flex-wrap justify-start dark:mt-40 lg:flex-nowrap"
         id="bannerSoon"
       >
         <div className={`flex items-start justify-start w-full lg:w-1/2`}>
@@ -31,8 +31,8 @@ export default function Benefits() {
         </div>
 
         <div className={`flex flex-wrap`}>
-          <div className="flex flex-col items-start lg:mt-32 mx-5 my-12 lg:mx-0">
-            <h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
+          <div className="flex flex-col items-start justify-center  mx-5 lg:mx-0">
+            <h3 className="max-w-2xl text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
               {t(bannerSoon.title)}
             </h3>
 

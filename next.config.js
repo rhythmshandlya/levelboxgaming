@@ -11,14 +11,3 @@ module.exports = {
     return config;
   },
 };
-
-module.exports = {
-  exportTrailingSlash: true,
-};
-
-// next.config.js
-module.exports = {
-  experimental: {
-    concurrentFeatures: true,
-  },
-};
