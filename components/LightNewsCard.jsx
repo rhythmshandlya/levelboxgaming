@@ -5,7 +5,7 @@ const ConceptArtCard = ({ news, id }) => {
   const { t } = useTranslation();
   console.log(news);
   return (
-    <div className="w-[350px] lg:w-[350px] dark:bg-[#434852] mx-auto">
+    <div className="w-[350px] md:w-[380px] lg:w-[420px] dark:bg-[#434852] mx-auto">
       <div>
         <img
           className="w-full rounded-lg"
@@ -19,16 +19,15 @@ const ConceptArtCard = ({ news, id }) => {
           </p>
           <p className="dark:text-white text-black text-base">
             {t(news.description)}
+            <a
+              href={`/news/${id}`}
+              className="inline px-3 text-base mr-2 mb-2 cursor-pointer"
+            >
+              {t("read_more")}
+            </a>
           </p>
         </div>
-        <div className="px-8 pb-2">
-          <a
-            href={`/news/${id}`}
-            className="inline-block0 px-3 text-base mr-2 mb-2 cursor-pointer"
-          >
-            {t("read_more")}
-          </a>
-        </div>
+        <div className="px-8 pb-2">{/*read more*/}</div>
         <br />
       </div>
     </div>

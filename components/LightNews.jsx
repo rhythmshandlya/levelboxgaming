@@ -44,7 +44,7 @@ export function LightNews() {
       id="conceptArt"
     >
       <h1 className="text-3xl font-semibold text-center  my-10">
-        {t("concept_art")}
+        {t("news_and_press")}
       </h1>
       <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce="true">
         <div className="flex flex-col">
