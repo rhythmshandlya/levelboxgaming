@@ -46,7 +46,7 @@ const Footer = () => {
         <p className="text-gray-500 dark:text-white">
           {t("designed_by")}
           <a href={footer.designedBy} className="text-gray-500 dark:text-white">
-            Dtory
+            &nbsp;Dtory
           </a>
           <br className="md:hidden" /> {t(footer.copyright)}
         </p>
